@@ -1,0 +1,63 @@
+\hypertarget{struct_kinematcis__}{}\section{Kinematcis\+\_\+ Struct Reference}
+\label{struct_kinematcis__}\index{Kinematcis\+\_\+@{Kinematcis\+\_\+}}
+
+
+Kinematics Structure contains the necessary data to run Kinematics. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the Kinematics structure during runtime. States of Kinematics contain the internal varying data and parameters of Kinematics contain the values that are used to configure the Kinematics structure.  
+
+
+
+
+{\ttfamily \#include $<$Kinematics.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_kinematcis___aebd619c051f3fd8718046a71979cf6fc}\label{struct_kinematcis___aebd619c051f3fd8718046a71979cf6fc}} 
+int \hyperlink{struct_kinematcis___aebd619c051f3fd8718046a71979cf6fc}{linked}
+\begin{DoxyCompactList}\small\item\em parameter to define if kinematics works under linked mode or normal mode, in normal mode, the control algorithm receives its inputs directly from its input array whereas in linked mode, the input array\textquotesingle{}s pointers are directed to other parameters in a system and the Kinematics can gather its data from outside. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_kinematcis___a78e43c702e73cb1e9213773e0779fbb5}\label{struct_kinematcis___a78e43c702e73cb1e9213773e0779fbb5}} 
+double \hyperlink{struct_kinematcis___a78e43c702e73cb1e9213773e0779fbb5}{input} \mbox{[}K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+IN\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of inputs to the Kinematics function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_kinematcis___af671911d08035a464bd0cb9a1e88d14a}\label{struct_kinematcis___af671911d08035a464bd0cb9a1e88d14a}} 
+double $\ast$ \hyperlink{struct_kinematcis___af671911d08035a464bd0cb9a1e88d14a}{input\+\_\+p} \mbox{[}K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+IN\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of inputs in pointer format to directly add references. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_kinematcis___acc8bbbaf51a1c1d866a545f39c3d418e}\label{struct_kinematcis___acc8bbbaf51a1c1d866a545f39c3d418e}} 
+double \hyperlink{struct_kinematcis___acc8bbbaf51a1c1d866a545f39c3d418e}{output} \mbox{[}K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+O\+UT\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of outputs of the Kinematics function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_kinematcis___adc1185b4e9df5b8d45b3ab6a7a52c6fe}\label{struct_kinematcis___adc1185b4e9df5b8d45b3ab6a7a52c6fe}} 
+double \hyperlink{struct_kinematcis___adc1185b4e9df5b8d45b3ab6a7a52c6fe}{state} \mbox{[}K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+S\+T\+A\+T\+ES\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the Kinematics funtion, internal data that the kinematics function may need. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_kinematcis___a556dfcb7cfd4c20b7f5345b4a9593dec}\label{struct_kinematcis___a556dfcb7cfd4c20b7f5345b4a9593dec}} 
+double \hyperlink{struct_kinematcis___a556dfcb7cfd4c20b7f5345b4a9593dec}{parameter} \mbox{[}K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parameters of the Kinematics, may include coefficients or offsets. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{struct_kinematcis___a28044bc9e9c97600e23158293c41aee7}{loop\+F\+W\+Kinematics} )(struct Kinematics\+\_\+ $\ast$k)
+\begin{DoxyCompactList}\small\item\em This function is the algorithm of the forward Kinematics, it is set by hihger level structures to run once per loop. Every different algorithm using the Kinematics structure must provide a loop function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kinematics Structure contains the necessary data to run Kinematics. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the Kinematics structure during runtime. States of Kinematics contain the internal varying data and parameters of Kinematics contain the values that are used to configure the Kinematics structure. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_kinematcis___a28044bc9e9c97600e23158293c41aee7}\label{struct_kinematcis___a28044bc9e9c97600e23158293c41aee7}} 
+\index{Kinematcis\+\_\+@{Kinematcis\+\_\+}!loop\+F\+W\+Kinematics@{loop\+F\+W\+Kinematics}}
+\index{loop\+F\+W\+Kinematics@{loop\+F\+W\+Kinematics}!Kinematcis\+\_\+@{Kinematcis\+\_\+}}
+\subsubsection{\texorpdfstring{loop\+F\+W\+Kinematics}{loopFWKinematics}}
+{\footnotesize\ttfamily void($\ast$ Kinematcis\+\_\+\+::loop\+F\+W\+Kinematics) (struct Kinematics\+\_\+ $\ast$k)}
+
+
+
+This function is the algorithm of the forward Kinematics, it is set by hihger level structures to run once per loop. Every different algorithm using the Kinematics structure must provide a loop function. 
+
+this is the function pointer to the algorithm of the Kinematics 
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to the Kinematics structure that contains the inputs, outputs, states and parameters of the Kinematics function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function does not have a return value, the Kinematics outputs are stored int the output array. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\hyperlink{_kinematics_8h}{Kinematics.\+h}\end{DoxyCompactItemize}

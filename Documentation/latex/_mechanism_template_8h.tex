@@ -1,0 +1,59 @@
+\hypertarget{_mechanism_template_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism\+Template.h File Reference}
+\label{_mechanism_template_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism\+Template.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism\+Template.\+h}}
+
+
+This file is a template for the creation of a mechanism. The functions within must be fulfilled and the state machine configured in order to provide functionnality to the mechanism.  
+
+
+{\ttfamily \#include \char`\"{}Mechanism.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_afcd419fb90945d61d9aacbc846ea13d3}\label{_mechanism_template_8h_afcd419fb90945d61d9aacbc846ea13d3}} 
+enum \hyperlink{_mechanism_template_8h_afcd419fb90945d61d9aacbc846ea13d3}{Mechanism\+Parameters} \begin{DoxyCompactList}\small\item\em Mechanism\+Parameters define what the parameters of this mechanism. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_af21aa74a8d2bd40372bf48566c1d420c}\label{_mechanism_template_8h_af21aa74a8d2bd40372bf48566c1d420c}} 
+enum \hyperlink{_mechanism_template_8h_af21aa74a8d2bd40372bf48566c1d420c}{Mechanism\+States} \{ {\bfseries State\+Machine}
+ \}\begin{DoxyCompactList}\small\item\em Mechanism\+States define what the states of this mechanims are. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_af2239ce7541beb2d428b16379f6bd4dc}\label{_mechanism_template_8h_af2239ce7541beb2d428b16379f6bd4dc}} 
+enum \hyperlink{_mechanism_template_8h_af2239ce7541beb2d428b16379f6bd4dc}{Mechanism\+State\+Machine\+States} \begin{DoxyCompactList}\small\item\em Mechanism\+State\+Machine\+States are the states of the State Machine within the mechanism. The state machine of the mechanims is utilized to command the mechanism from one state to the other. The default states of the state machine are inactive and initialize. Depending on the needs of the mechanism the states should also include following position references and following speed references. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_mechanism_template_8h_af2239ce7541beb2d428b16379f6bd4dc}{Mechanism\+State\+Machine\+States} \hyperlink{_mechanism_template_8h_afe9ebd2cb2cb28434c1d9470081b4162}{loop\+Mechanism} (\hyperlink{struct_mechanism__}{Mechanism} $\ast$M, double ref\mbox{[}M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R\+R\+EF\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_a389a3858fa16d208aa27034758f8b85f}\label{_mechanism_template_8h_a389a3858fa16d208aa27034758f8b85f}} 
+{\bfseries initialize}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_abfb077659c76461dfefe0406664c2e92}\label{_mechanism_template_8h_abfb077659c76461dfefe0406664c2e92}} 
+{\bfseries inactive}
+\item 
+\mbox{\Hypertarget{_mechanism_template_8h_a56ab5fad99f595218aae18d1b7cce0d2}\label{_mechanism_template_8h_a56ab5fad99f595218aae18d1b7cce0d2}} 
+\hyperlink{_mechanism_template_8h_a56ab5fad99f595218aae18d1b7cce0d2}{loop}
+\begin{DoxyCompactList}\small\item\em fill in the other states \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file is a template for the creation of a mechanism. The functions within must be fulfilled and the state machine configured in order to provide functionnality to the mechanism. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_mechanism_template_8h_afe9ebd2cb2cb28434c1d9470081b4162}\label{_mechanism_template_8h_afe9ebd2cb2cb28434c1d9470081b4162}} 
+\index{Mechanism\+Template.\+h@{Mechanism\+Template.\+h}!loop\+Mechanism@{loop\+Mechanism}}
+\index{loop\+Mechanism@{loop\+Mechanism}!Mechanism\+Template.\+h@{Mechanism\+Template.\+h}}
+\subsubsection{\texorpdfstring{loop\+Mechanism()}{loopMechanism()}}
+{\footnotesize\ttfamily enum \hyperlink{_mechanism_template_8h_af2239ce7541beb2d428b16379f6bd4dc}{Mechanism\+State\+Machine\+States} \hyperlink{_observer_8h_ac1c1fa0a72d0afcc17934c7992a4a78d}{loop\+Mechanism} (\begin{DoxyParamCaption}\item[{\hyperlink{struct_mechanism__}{Mechanism} $\ast$}]{M,  }\item[{double}]{ref\mbox{[}\+M\+A\+N\+I\+P\+U\+L\+A\+T\+O\+R\+R\+E\+F\mbox{]} }\end{DoxyParamCaption})}
+
+Perform initialization of actuators sensors axes etc...
+
+get reference for the manipulator
+
+Transform the coordinate references to axis references
+
+Command axees 

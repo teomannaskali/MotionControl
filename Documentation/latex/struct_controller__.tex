@@ -1,0 +1,63 @@
+\hypertarget{struct_controller__}{}\section{Controller\+\_\+ Struct Reference}
+\label{struct_controller__}\index{Controller\+\_\+@{Controller\+\_\+}}
+
+
+Controller Structure contains the necessary data to run a controller. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the controller structure during runtime. States of a controller contain the internal varying data and parameters of the controller contain the values are used to tune the controller.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_controller___af582cd0143eb90cf9009ba6c4692e70c}\label{struct_controller___af582cd0143eb90cf9009ba6c4692e70c}} 
+int \hyperlink{struct_controller___af582cd0143eb90cf9009ba6c4692e70c}{linked}
+\begin{DoxyCompactList}\small\item\em parameter to define if a controller works under linked mode or normal mode, in normal mode, the control algorithm receives its inputs directly from its input array whereas in linked mode, the input array\textquotesingle{}s pointers are directed to other parameters in a system and the controller can gather its data from outside. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_controller___a0504cd8c3305e9111e111fea11ec2aa2}\label{struct_controller___a0504cd8c3305e9111e111fea11ec2aa2}} 
+double \hyperlink{struct_controller___a0504cd8c3305e9111e111fea11ec2aa2}{input} \mbox{[}C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+IN\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of inputs to the controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_controller___a972e0c0df9ef11d202cdab559bd2c137}\label{struct_controller___a972e0c0df9ef11d202cdab559bd2c137}} 
+double $\ast$ \hyperlink{struct_controller___a972e0c0df9ef11d202cdab559bd2c137}{input\+\_\+p} \mbox{[}C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+IN\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of inputs in pointer format to directly add references. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_controller___a3be6b0f46af37ab6556d42ce6aa0e535}\label{struct_controller___a3be6b0f46af37ab6556d42ce6aa0e535}} 
+double \hyperlink{struct_controller___a3be6b0f46af37ab6556d42ce6aa0e535}{output} \mbox{[}C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+O\+UT\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of outputs of the controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_controller___a36673cd95422d92e51d0d90fc0e8485c}\label{struct_controller___a36673cd95422d92e51d0d90fc0e8485c}} 
+double \hyperlink{struct_controller___a36673cd95422d92e51d0d90fc0e8485c}{state} \mbox{[}C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+S\+T\+A\+T\+ES\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the controller, internal data that the actuator may need. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_controller___abecfc45970cfcd7e9385e2fbf851ab16}\label{struct_controller___abecfc45970cfcd7e9385e2fbf851ab16}} 
+double \hyperlink{struct_controller___abecfc45970cfcd7e9385e2fbf851ab16}{parameter} \mbox{[}C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parameters of the controller, may include coefficients or offsets. \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{struct_controller___ac5ade2089c5a8f6fd1fcbad7edcb6273}{loop\+Controller} )(struct \hyperlink{struct_controller__}{Controller\+\_\+} $\ast$c)
+\begin{DoxyCompactList}\small\item\em This function is the algorithm of the controller, it is set by hihger level structures to run once per loop. Every different algorithm using the Controller structure must provide a loop function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller Structure contains the necessary data to run a controller. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the controller structure during runtime. States of a controller contain the internal varying data and parameters of the controller contain the values are used to tune the controller. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_controller___ac5ade2089c5a8f6fd1fcbad7edcb6273}\label{struct_controller___ac5ade2089c5a8f6fd1fcbad7edcb6273}} 
+\index{Controller\+\_\+@{Controller\+\_\+}!loop\+Controller@{loop\+Controller}}
+\index{loop\+Controller@{loop\+Controller}!Controller\+\_\+@{Controller\+\_\+}}
+\subsubsection{\texorpdfstring{loop\+Controller}{loopController}}
+{\footnotesize\ttfamily void($\ast$ Controller\+\_\+\+::loop\+Controller) (struct \hyperlink{struct_controller__}{Controller\+\_\+} $\ast$c)}
+
+
+
+This function is the algorithm of the controller, it is set by hihger level structures to run once per loop. Every different algorithm using the Controller structure must provide a loop function. 
+
+this is the function pointer to the algorithm of the controller 
+\begin{DoxyParams}{Parameters}
+{\em c} & is a pointer to the Controller structure that contains the inputs, outputs, states and parameters of the controller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Function does not have a return value, the controller outputs are stored int the output array. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\hyperlink{_controller_8h}{Controller.\+h}\end{DoxyCompactItemize}

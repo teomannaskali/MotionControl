@@ -1,0 +1,101 @@
+\hypertarget{_conveyor_motor_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Motor.h File Reference}
+\label{_conveyor_motor_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Motor.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Motor.\+h}}
+{\ttfamily \#include \char`\"{}Actuator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}H\+W\+Wrapper.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_conveyor_motor_8h_ad94a46b1ceb0e8123800488576ff3d5e}{Conveyor\+Motor\+Parameters} \{ {\bfseries Speed} = 0, 
+{\bfseries Meters\+Per\+Volt} = 1
+ \}\begin{DoxyCompactList}\small\item\em To Enable the functions of an actuator these parts should be filled. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_conveyor_motor_8h_a4d114a336327fcc45f6951b09b04194d}{init\+Conveyor\+Motor} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_motor_8h_a4377737fd3cfed5298a8f760ee04d02a}{write\+Conveyor\+Motor} (\hyperlink{struct_actuator__}{Actuator} $\ast$d, double speed)
+\item 
+int \hyperlink{_conveyor_motor_8h_a5fb1a4a24a59ab547ace46365b515834}{remove\+Conveyor\+Motor} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_motor_8h_a18b59f29c4c73bdca53bffcb98ee2fc8}{reset\+Conveyor\+Motor} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_motor_8h_a5b39eab6c0429b038a85654e38fbbad9}{set\+Conveyor\+Motor\+Parameter} (\hyperlink{struct_actuator__}{Actuator} $\ast$d, int parameter, double value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Conveyor motor file describing the conveyor motor as an actuator 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_conveyor_motor_8h_ad94a46b1ceb0e8123800488576ff3d5e}\label{_conveyor_motor_8h_ad94a46b1ceb0e8123800488576ff3d5e}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!Conveyor\+Motor\+Parameters@{Conveyor\+Motor\+Parameters}}
+\index{Conveyor\+Motor\+Parameters@{Conveyor\+Motor\+Parameters}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{Conveyor\+Motor\+Parameters}{ConveyorMotorParameters}}
+{\footnotesize\ttfamily enum \hyperlink{_conveyor_motor_8h_ad94a46b1ceb0e8123800488576ff3d5e}{Conveyor\+Motor\+Parameters}}
+
+
+
+To Enable the functions of an actuator these parts should be filled. 
+
+Addition of the actuator header file Add access to the IO cards of the system 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_conveyor_motor_8h_a4d114a336327fcc45f6951b09b04194d}\label{_conveyor_motor_8h_a4d114a336327fcc45f6951b09b04194d}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!init\+Conveyor\+Motor@{init\+Conveyor\+Motor}}
+\index{init\+Conveyor\+Motor@{init\+Conveyor\+Motor}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{init\+Conveyor\+Motor()}{initConveyorMotor()}}
+{\footnotesize\ttfamily int init\+Conveyor\+Motor (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Initializes the actuator. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+Write initialization code for the actuator \mbox{\Hypertarget{_conveyor_motor_8h_a5fb1a4a24a59ab547ace46365b515834}\label{_conveyor_motor_8h_a5fb1a4a24a59ab547ace46365b515834}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!remove\+Conveyor\+Motor@{remove\+Conveyor\+Motor}}
+\index{remove\+Conveyor\+Motor@{remove\+Conveyor\+Motor}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{remove\+Conveyor\+Motor()}{removeConveyorMotor()}}
+{\footnotesize\ttfamily int remove\+Conveyor\+Motor (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Removes resources allocated to the acutator if they exist. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+IO card does not need remvoal \mbox{\Hypertarget{_conveyor_motor_8h_a18b59f29c4c73bdca53bffcb98ee2fc8}\label{_conveyor_motor_8h_a18b59f29c4c73bdca53bffcb98ee2fc8}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!reset\+Conveyor\+Motor@{reset\+Conveyor\+Motor}}
+\index{reset\+Conveyor\+Motor@{reset\+Conveyor\+Motor}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{reset\+Conveyor\+Motor()}{resetConveyorMotor()}}
+{\footnotesize\ttfamily int reset\+Conveyor\+Motor (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Reset the actuator 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_conveyor_motor_8h_a5b39eab6c0429b038a85654e38fbbad9}\label{_conveyor_motor_8h_a5b39eab6c0429b038a85654e38fbbad9}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!set\+Conveyor\+Motor\+Parameter@{set\+Conveyor\+Motor\+Parameter}}
+\index{set\+Conveyor\+Motor\+Parameter@{set\+Conveyor\+Motor\+Parameter}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{set\+Conveyor\+Motor\+Parameter()}{setConveyorMotorParameter()}}
+{\footnotesize\ttfamily int set\+Conveyor\+Motor\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d,  }\item[{int}]{parameter,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Sets the parameter for the actuator. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_conveyor_motor_8h_a4377737fd3cfed5298a8f760ee04d02a}\label{_conveyor_motor_8h_a4377737fd3cfed5298a8f760ee04d02a}} 
+\index{Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}!write\+Conveyor\+Motor@{write\+Conveyor\+Motor}}
+\index{write\+Conveyor\+Motor@{write\+Conveyor\+Motor}!Conveyor\+Motor.\+h@{Conveyor\+Motor.\+h}}
+\subsubsection{\texorpdfstring{write\+Conveyor\+Motor()}{writeConveyorMotor()}}
+{\footnotesize\ttfamily int write\+Conveyor\+Motor (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d,  }\item[{double}]{speed }\end{DoxyParamCaption})}
+
+Set the speed for the conveyor 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+{\em speed} & speed for the conveyor \\
+\hline
+\end{DoxyParams}
+Convert speed to volts 

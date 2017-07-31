@@ -1,0 +1,88 @@
+\hypertarget{_controller_template_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller\+Template.h File Reference}
+\label{_controller_template_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller\+Template.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller\+Template.\+h}}
+
+
+This is a template file to generate a controller.  
+
+
+{\ttfamily \#include \char`\"{}Controller.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_controller_template_8h_ab7debc92e24a87d0806da694f37fccaa}{Controller\+Parameters} \{ {\bfseries parameter1}, 
+{\bfseries parameter2}
+ \}\begin{DoxyCompactList}\small\item\em Prefix Use a 3 letter prefix for the customizations. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_controller_template_8h_a5fc00136aed8670588116836c7a3aed2}\label{_controller_template_8h_a5fc00136aed8670588116836c7a3aed2}} 
+enum \hyperlink{_controller_template_8h_a5fc00136aed8670588116836c7a3aed2}{Controller\+States} \{ {\bfseries S\+M\+C\+\_\+error\+\_\+old}, 
+{\bfseries S\+M\+C\+\_\+sigma\+\_\+old}, 
+{\bfseries S\+M\+C\+\_\+u\+\_\+old}
+ \}\begin{DoxyCompactList}\small\item\em Controller states, used to store data between iterations of the loop to obtain derivative values. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_controller_template_8h_a138abadb3e4534f9fd070033b5cb46a6}\label{_controller_template_8h_a138abadb3e4534f9fd070033b5cb46a6}} 
+enum \hyperlink{_controller_template_8h_a138abadb3e4534f9fd070033b5cb46a6}{Controller\+Input} \{ {\bfseries reference}, 
+{\bfseries position}
+ \}\begin{DoxyCompactList}\small\item\em Inputs to the control function. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593}{Controller\+Output} \{ \hyperlink{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593a63f235d4a03b00a5e43f0bfa785c853d}{u}
+ \}\begin{DoxyCompactList}\small\item\em Outputs of the control algorithm. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_controller_template_8h_a6a790211ebcdb526b2ca9b14c5a8c2e5}{loop\+Controller} (\hyperlink{struct_controller__}{Controller} $\ast$c)
+\item 
+\mbox{\Hypertarget{_controller_template_8h_a06bf58d68f657ec90962665d6f53497e}\label{_controller_template_8h_a06bf58d68f657ec90962665d6f53497e}} 
+void \hyperlink{_controller_template_8h_a06bf58d68f657ec90962665d6f53497e}{set\+Controller\+Parameters} (\hyperlink{struct_controller__}{Controller} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Set controllers parameters and time constant. Parameters may be configured with a separate function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a template file to generate a controller. 
+
+A controller is implemented in this file. The Controller is based around the Controller structure, int receives its inputs from the input array and it writes its outputs to the output array. The states of the controller c$\ast$ 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593}\label{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593}} 
+\index{Controller\+Template.\+h@{Controller\+Template.\+h}!Controller\+Output@{Controller\+Output}}
+\index{Controller\+Output@{Controller\+Output}!Controller\+Template.\+h@{Controller\+Template.\+h}}
+\subsubsection{\texorpdfstring{Controller\+Output}{ControllerOutput}}
+{\footnotesize\ttfamily enum \hyperlink{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593}{Controller\+Output}}
+
+
+
+Outputs of the control algorithm. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{u@{u}!Controller\+Template.\+h@{Controller\+Template.\+h}}\index{Controller\+Template.\+h@{Controller\+Template.\+h}!u@{u}}}\mbox{\Hypertarget{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593a63f235d4a03b00a5e43f0bfa785c853d}\label{_controller_template_8h_ab06c62aeee50477e88ab23b5105b5593a63f235d4a03b00a5e43f0bfa785c853d}} 
+u&Control output of control function. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_controller_template_8h_ab7debc92e24a87d0806da694f37fccaa}\label{_controller_template_8h_ab7debc92e24a87d0806da694f37fccaa}} 
+\index{Controller\+Template.\+h@{Controller\+Template.\+h}!Controller\+Parameters@{Controller\+Parameters}}
+\index{Controller\+Parameters@{Controller\+Parameters}!Controller\+Template.\+h@{Controller\+Template.\+h}}
+\subsubsection{\texorpdfstring{Controller\+Parameters}{ControllerParameters}}
+{\footnotesize\ttfamily enum \hyperlink{_controller_template_8h_ab7debc92e24a87d0806da694f37fccaa}{Controller\+Parameters}}
+
+
+
+Prefix Use a 3 letter prefix for the customizations. 
+
+Controller parameters, used to configure the controller 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_controller_template_8h_a6a790211ebcdb526b2ca9b14c5a8c2e5}\label{_controller_template_8h_a6a790211ebcdb526b2ca9b14c5a8c2e5}} 
+\index{Controller\+Template.\+h@{Controller\+Template.\+h}!loop\+Controller@{loop\+Controller}}
+\index{loop\+Controller@{loop\+Controller}!Controller\+Template.\+h@{Controller\+Template.\+h}}
+\subsubsection{\texorpdfstring{loop\+Controller()}{loopController()}}
+{\footnotesize\ttfamily void loop\+Controller (\begin{DoxyParamCaption}\item[{\hyperlink{struct_controller__}{Controller} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Control algorithm 
+\begin{DoxyParams}{Parameters}
+{\em c} & pointer to a controller structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return values are contained in the Controller structures output array 
+\end{DoxyReturn}

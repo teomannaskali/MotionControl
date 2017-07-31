@@ -1,0 +1,52 @@
+\hypertarget{struct_mechanism__}{}\section{Mechanism\+\_\+ Struct Reference}
+\label{struct_mechanism__}\index{Mechanism\+\_\+@{Mechanism\+\_\+}}
+
+
+Structure containing the data for an mechanism, including inputs, outputs, state machine state, links to the actuators, sensors, axes, controllers plus, parameters and states for internal storage of data.  
+
+
+
+
+{\ttfamily \#include $<$Mechanism.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mechanism___ab385a347f349de5cc29ccb33449aede0}\label{struct_mechanism___ab385a347f349de5cc29ccb33449aede0}} 
+char $\ast$ \hyperlink{struct_mechanism___ab385a347f349de5cc29ccb33449aede0}{name}
+\begin{DoxyCompactList}\small\item\em name of the actuator \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mechanism___a26ce038ef9b8ac0083a4f6c2c44397cf}\label{struct_mechanism___a26ce038ef9b8ac0083a4f6c2c44397cf}} 
+int \hyperlink{struct_mechanism___a26ce038ef9b8ac0083a4f6c2c44397cf}{State\+Machine}
+\begin{DoxyCompactList}\small\item\em state machine status of the mechanism \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mechanism___a53fa657ea7cb16e8db924988a9da9870}\label{struct_mechanism___a53fa657ea7cb16e8db924988a9da9870}} 
+double {\bfseries input} \mbox{[}\hyperlink{_mechanism_8h_abb111d77b10e0fef53b6391bef62a824}{M\+E\+C\+H\+I\+N\+P\+UT}\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_mechanism___a98a865ba4a9ceab5899b99a85599bbeb}\label{struct_mechanism___a98a865ba4a9ceab5899b99a85599bbeb}} 
+double {\bfseries output} \mbox{[}M\+E\+C\+H\+O\+U\+T\+P\+UT\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_mechanism___a073ccbb495cd69c3a81b7b1a12a43259}\label{struct_mechanism___a073ccbb495cd69c3a81b7b1a12a43259}} 
+double \hyperlink{struct_mechanism___a073ccbb495cd69c3a81b7b1a12a43259}{parameter} \mbox{[}\hyperlink{_mechanism_8h_a94f70e12521cf4dbbb63b8996e2bda3b}{M\+E\+C\+H\+P\+A\+R\+A\+M\+E\+T\+E\+RS}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parameters of the Mechanism, used to configure the Mechanism. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mechanism___a41dcb0c7ca1880e7bdb84d4116a384ec}\label{struct_mechanism___a41dcb0c7ca1880e7bdb84d4116a384ec}} 
+double \hyperlink{struct_mechanism___a41dcb0c7ca1880e7bdb84d4116a384ec}{state} \mbox{[}\hyperlink{_mechanism_8h_affe80c064d15f5b0187bd5ff3b356f91}{M\+E\+C\+H\+S\+T\+A\+T\+ES}\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the Mechanism, used to store internal data of the Mechanism. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_mechanism___a249f979e73921aee5c1d76602612c6a7}\label{struct_mechanism___a249f979e73921aee5c1d76602612c6a7}} 
+\hyperlink{struct_actuator__}{Actuator} {\bfseries Actuators} \mbox{[}\hyperlink{_mechanism_8h_a0cf5b42728552f65e8f9d570bdd05b56}{M\+E\+C\+H\+A\+C\+T\+U\+A\+T\+O\+RS}\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_mechanism___a83e597c40ede86875129727b103f81bb}\label{struct_mechanism___a83e597c40ede86875129727b103f81bb}} 
+\hyperlink{struct_sensor__}{Sensor} {\bfseries Sensors} \mbox{[}\hyperlink{_mechanism_8h_a654d9b5b9af65f6b5870840708d1e6c3}{M\+E\+C\+H\+S\+E\+N\+S\+O\+RS}\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_mechanism___a3397ca01d022348c15408938c219592d}\label{struct_mechanism___a3397ca01d022348c15408938c219592d}} 
+\hyperlink{struct_axis__}{Axis} {\bfseries Axes} \mbox{[}\hyperlink{_mechanism_8h_a1fbdf028a4b1aa161417e430d2d7809c}{M\+E\+C\+H\+A\+X\+ES}\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_mechanism___a1ef16857f71bb4e7c8735287d631723c}\label{struct_mechanism___a1ef16857f71bb4e7c8735287d631723c}} 
+int($\ast$ {\bfseries loop\+Mechanism} )(struct \hyperlink{struct_mechanism__}{Mechanism\+\_\+} $\ast$M)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure containing the data for an mechanism, including inputs, outputs, state machine state, links to the actuators, sensors, axes, controllers plus, parameters and states for internal storage of data. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\hyperlink{_mechanism_8h}{Mechanism.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{_actuator_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Actuator.h File Reference}
+\label{_actuator_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Actuator.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Actuator.\+h}}
+
+
+General definition of an actuator containing the data structures. An actuator structure Contains the staes and parameters of an actuator along with the channel numbers for the IO\textquotesingle{}s. The actuator structure also has function pointers to attach initialization, writing, removal, resetting and parameter setting functions.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_actuator__}{Actuator\+\_\+}
+\begin{DoxyCompactList}\small\item\em Actuator structure contains all the parameters states IO channels and function pointers to an actuator structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}\label{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}} 
+\#define \hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}~3
+\begin{DoxyCompactList}\small\item\em Defines the number of maximum different types input or output IO channel access by a single actuator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_actuator_8h_a51f2ad8e0c5ac16d2715f9cf94c4dd58}\label{_actuator_8h_a51f2ad8e0c5ac16d2715f9cf94c4dd58}} 
+\#define \hyperlink{_actuator_8h_a51f2ad8e0c5ac16d2715f9cf94c4dd58}{A\+C\+T\+M\+A\+X\+IN}~3
+\begin{DoxyCompactList}\small\item\em Defines the maximum number of inputs all actuators may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_actuator_8h_ac9f353fdc4ab6ddd068b877c797d08a2}\label{_actuator_8h_ac9f353fdc4ab6ddd068b877c797d08a2}} 
+\#define \hyperlink{_actuator_8h_ac9f353fdc4ab6ddd068b877c797d08a2}{A\+C\+T\+M\+A\+X\+O\+UT}~3
+\begin{DoxyCompactList}\small\item\em Defines the maximum number of outputs all actuators may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_actuator_8h_aa4b689fdf6fed3db04789f692cb26d62}\label{_actuator_8h_aa4b689fdf6fed3db04789f692cb26d62}} 
+\#define \hyperlink{_actuator_8h_aa4b689fdf6fed3db04789f692cb26d62}{A\+C\+T\+M\+A\+X\+S\+T\+A\+T\+ES}~5
+\begin{DoxyCompactList}\small\item\em Define the maximum number of states that all actuator may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_actuator_8h_ac0b3df9afc41a8edeb402e6da4c50155}\label{_actuator_8h_ac0b3df9afc41a8edeb402e6da4c50155}} 
+\#define \hyperlink{_actuator_8h_ac0b3df9afc41a8edeb402e6da4c50155}{A\+C\+T\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}~4
+\begin{DoxyCompactList}\small\item\em Define the maximum number of parameters that all actuators may have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_actuator_8h_a3760004d31ced35515acd6d7b683c38e}\label{_actuator_8h_a3760004d31ced35515acd6d7b683c38e}} 
+typedef struct \hyperlink{struct_actuator__}{Actuator\+\_\+} {\bfseries Actuator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_actuator_8h_ad47241af7d3d538b162ad6c39a1fb5f0}{setup\+Actuator} (\hyperlink{struct_actuator__}{Actuator} $\ast$d, char $\ast$name, char $\ast$units, int($\ast$init)(\hyperlink{struct_actuator__}{Actuator} $\ast$d), int($\ast$write)(\hyperlink{struct_actuator__}{Actuator} $\ast$d, double value), int($\ast$remove)(\hyperlink{struct_actuator__}{Actuator} $\ast$d), int($\ast$reset)(\hyperlink{struct_actuator__}{Actuator} $\ast$d), int($\ast$set\+Parameter)(\hyperlink{struct_actuator__}{Actuator} $\ast$d, int parameter, double value))
+\begin{DoxyCompactList}\small\item\em setup actuator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General definition of an actuator containing the data structures. An actuator structure Contains the staes and parameters of an actuator along with the channel numbers for the IO\textquotesingle{}s. The actuator structure also has function pointers to attach initialization, writing, removal, resetting and parameter setting functions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_actuator_8h_ad47241af7d3d538b162ad6c39a1fb5f0}\label{_actuator_8h_ad47241af7d3d538b162ad6c39a1fb5f0}} 
+\index{Actuator.\+h@{Actuator.\+h}!setup\+Actuator@{setup\+Actuator}}
+\index{setup\+Actuator@{setup\+Actuator}!Actuator.\+h@{Actuator.\+h}}
+\subsubsection{\texorpdfstring{setup\+Actuator()}{setupActuator()}}
+{\footnotesize\ttfamily int setup\+Actuator (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d,  }\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{units,  }\item[{int($\ast$)(\hyperlink{struct_actuator__}{Actuator} $\ast$d)}]{init,  }\item[{int($\ast$)(\hyperlink{struct_actuator__}{Actuator} $\ast$d, double value)}]{write,  }\item[{int($\ast$)(\hyperlink{struct_actuator__}{Actuator} $\ast$d)}]{remove,  }\item[{int($\ast$)(\hyperlink{struct_actuator__}{Actuator} $\ast$d)}]{reset,  }\item[{int($\ast$)(\hyperlink{struct_actuator__}{Actuator} $\ast$d, int parameter, double value)}]{set\+Parameter }\end{DoxyParamCaption})}
+
+
+
+setup actuator 
+
+Function to setup the actuator This function is used to setup the fields of the actuator structure 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+{\em name} & contains name of the actuator as a string \\
+\hline
+{\em units} & contains the units of the actuator as a string \\
+\hline
+{\em init} & funtion pointer to the function to initialize the actuator \\
+\hline
+{\em write} & function pointer to the function to write to the actuator \\
+\hline
+{\em remove} & function pointer to the function to remove or delete the actuator \\
+\hline
+{\em reset} & function pointer to the function to reset the actuator \\
+\hline
+{\em set\+Parameter} & function pointer to the function to set the parameters of the actuator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}

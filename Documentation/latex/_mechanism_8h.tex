@@ -1,0 +1,53 @@
+\hypertarget{_mechanism_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism.h File Reference}
+\label{_mechanism_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Mechanism.\+h}}
+
+
+General definition of an mechanism containing the data structures. This file contains the data structure needed to create a mechanism. The data of a mechanism includes its states, its parameters and other modules it utilizes, such as Actuators, Sensors, Axes. The mechanism structure also has access to Kinematics, Controllers, Estimators and Observers.  
+
+
+{\ttfamily \#include \char`\"{}Actuator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sensor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Axis.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_mechanism__}{Mechanism\+\_\+}
+\begin{DoxyCompactList}\small\item\em Structure containing the data for an mechanism, including inputs, outputs, state machine state, links to the actuators, sensors, axes, controllers plus, parameters and states for internal storage of data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_mechanism_8h_a1fbdf028a4b1aa161417e430d2d7809c}\label{_mechanism_8h_a1fbdf028a4b1aa161417e430d2d7809c}} 
+\#define \hyperlink{_mechanism_8h_a1fbdf028a4b1aa161417e430d2d7809c}{M\+E\+C\+H\+A\+X\+ES}~5
+\begin{DoxyCompactList}\small\item\em Maximum Number of Axes a mechanism may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_ae54b8b3155ff1cc8fa97fc9f219ccfaf}\label{_mechanism_8h_ae54b8b3155ff1cc8fa97fc9f219ccfaf}} 
+\#define \hyperlink{_mechanism_8h_ae54b8b3155ff1cc8fa97fc9f219ccfaf}{M\+E\+C\+H\+K\+I\+N\+E\+M\+A\+T\+I\+CS}~2
+\begin{DoxyCompactList}\small\item\em Maximum Number of Kinematics functions a Mechanism may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_a0cf5b42728552f65e8f9d570bdd05b56}\label{_mechanism_8h_a0cf5b42728552f65e8f9d570bdd05b56}} 
+\#define \hyperlink{_mechanism_8h_a0cf5b42728552f65e8f9d570bdd05b56}{M\+E\+C\+H\+A\+C\+T\+U\+A\+T\+O\+RS}~7
+\begin{DoxyCompactList}\small\item\em Maximum Number of Actuators a Mechansim may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_a654d9b5b9af65f6b5870840708d1e6c3}\label{_mechanism_8h_a654d9b5b9af65f6b5870840708d1e6c3}} 
+\#define \hyperlink{_mechanism_8h_a654d9b5b9af65f6b5870840708d1e6c3}{M\+E\+C\+H\+S\+E\+N\+S\+O\+RS}~3
+\begin{DoxyCompactList}\small\item\em Maximum Number of Sensors a Mechanism may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_abb111d77b10e0fef53b6391bef62a824}\label{_mechanism_8h_abb111d77b10e0fef53b6391bef62a824}} 
+\#define \hyperlink{_mechanism_8h_abb111d77b10e0fef53b6391bef62a824}{M\+E\+C\+H\+I\+N\+P\+UT}~6
+\begin{DoxyCompactList}\small\item\em Maximum Number of References a Mechanism may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_afcdab8fc36d3a89a521aed32e8bb5d55}\label{_mechanism_8h_afcdab8fc36d3a89a521aed32e8bb5d55}} 
+\#define {\bfseries M\+E\+C\+H\+O\+U\+T\+P\+UT}~6
+\item 
+\mbox{\Hypertarget{_mechanism_8h_affe80c064d15f5b0187bd5ff3b356f91}\label{_mechanism_8h_affe80c064d15f5b0187bd5ff3b356f91}} 
+\#define \hyperlink{_mechanism_8h_affe80c064d15f5b0187bd5ff3b356f91}{M\+E\+C\+H\+S\+T\+A\+T\+ES}~10
+\begin{DoxyCompactList}\small\item\em Maximum Number of States a Mechansim may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_mechanism_8h_a94f70e12521cf4dbbb63b8996e2bda3b}\label{_mechanism_8h_a94f70e12521cf4dbbb63b8996e2bda3b}} 
+\#define \hyperlink{_mechanism_8h_a94f70e12521cf4dbbb63b8996e2bda3b}{M\+E\+C\+H\+P\+A\+R\+A\+M\+E\+T\+E\+RS}~10
+\begin{DoxyCompactList}\small\item\em Maximum Number of Parameters a Mechanism may have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_mechanism_8h_a57b3007fa98db4bc7d10c2795a477aa8}\label{_mechanism_8h_a57b3007fa98db4bc7d10c2795a477aa8}} 
+typedef struct \hyperlink{struct_mechanism__}{Mechanism\+\_\+} {\bfseries Mechanism}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General definition of an mechanism containing the data structures. This file contains the data structure needed to create a mechanism. The data of a mechanism includes its states, its parameters and other modules it utilizes, such as Actuators, Sensors, Axes. The mechanism structure also has access to Kinematics, Controllers, Estimators and Observers. 
+

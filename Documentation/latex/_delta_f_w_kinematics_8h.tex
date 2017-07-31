@@ -1,0 +1,162 @@
+\hypertarget{_delta_f_w_kinematics_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Examples/\+Delta\+F\+W\+Kinematics.h File Reference}
+\label{_delta_f_w_kinematics_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Examples/\+Delta\+F\+W\+Kinematics.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Examples/\+Delta\+F\+W\+Kinematics.\+h}}
+
+
+Implementation of the Delta Robot Kinematics.  
+
+
+{\ttfamily \#include \char`\"{}Kinematics.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398}{Delta\+F\+W\+Kinematics\+Parameters} \{ \newline
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab1e1ab27428b4aa30967b52a0c996f98}{Delta\+LA}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab7e57ace2c87664c4c51703db60c2864}{Delta\+LB}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a5c703b33efefd0b1a952afdcfa5795e2}{Delta\+RA}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2cf82fa8ce70f8ba727eaff72c775985}{Delta\+RB}, 
+\newline
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a28f3684f363941e7bdab0edd7e7cb2a6}{Delta\+Theta1}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2d8093637c6e68320fb79dc7f8c49b79}{Delta\+Theta2}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398af064493724ed794df22e38aad1104834}{Delta\+Theta3}, 
+\hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2c1cb72105400ae59a0865bcdf46bb2f}{Delta\+Zofset}
+ \}\begin{DoxyCompactList}\small\item\em $<$ Included to obtain the Kinematics struct. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873b}{Delta\+F\+W\+Kinematics\+Input} \{ \hyperlink{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873bade6f1f06b7bf99c6a84cb31d8993851c}{Delta\+F\+W\+Alpha1}, 
+\hyperlink{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba56960510f135d9bd777696490add4a58}{Delta\+F\+W\+Alpha2}, 
+\hyperlink{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba199efa02bc54def32f883cc322e98068}{Delta\+F\+W\+Alpha3}
+ \}\begin{DoxyCompactList}\small\item\em Inputs to the Delta robot forward kinematics array. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdf}{Delta\+F\+W\+Kinematics\+Output} \{ \hyperlink{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa8cf99974c06af555face853347ca88ac}{Delta\+F\+WX}, 
+\hyperlink{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa6887ce9d24ae6a0134fc794f8e8cf13e}{Delta\+F\+WY}, 
+\hyperlink{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa7b05080e6f19e7636b6516a8a6749d35}{Delta\+F\+WZ}
+ \}\begin{DoxyCompactList}\small\item\em Outputs of the delta robot forward kinematics. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_delta_f_w_kinematics_8h_aa76b251263bc2b2d6a1f45195e584e66}{loop\+Delta\+F\+W\+Kinematics} (Kinematics $\ast$k)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a66eca86c270d334c83c936c4b8fa017d}\label{_delta_f_w_kinematics_8h_a66eca86c270d334c83c936c4b8fa017d}} 
+enum \hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398}{Delta\+F\+W\+Kinematics\+Parameters} {\bfseries init\+Filter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of the Delta Robot Kinematics. 
+
+Forward kinematics of a delta robot are implemented in this file $\ast$ 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873b}\label{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873b}} 
+\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Kinematics\+Input@{Delta\+F\+W\+Kinematics\+Input}}
+\index{Delta\+F\+W\+Kinematics\+Input@{Delta\+F\+W\+Kinematics\+Input}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}
+\subsubsection{\texorpdfstring{Delta\+F\+W\+Kinematics\+Input}{DeltaFWKinematicsInput}}
+{\footnotesize\ttfamily enum \hyperlink{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873b}{Delta\+F\+W\+Kinematics\+Input}}
+
+
+
+Inputs to the Delta robot forward kinematics array. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+W\+Alpha1@{Delta\+F\+W\+Alpha1}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Alpha1@{Delta\+F\+W\+Alpha1}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873bade6f1f06b7bf99c6a84cb31d8993851c}\label{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873bade6f1f06b7bf99c6a84cb31d8993851c}} 
+Delta\+F\+W\+Alpha1&alpha1 coordinate in joint space, input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+W\+Alpha2@{Delta\+F\+W\+Alpha2}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Alpha2@{Delta\+F\+W\+Alpha2}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba56960510f135d9bd777696490add4a58}\label{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba56960510f135d9bd777696490add4a58}} 
+Delta\+F\+W\+Alpha2&alpha2 cooridnate in joint space, input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+W\+Alpha3@{Delta\+F\+W\+Alpha3}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Alpha3@{Delta\+F\+W\+Alpha3}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba199efa02bc54def32f883cc322e98068}\label{_delta_f_w_kinematics_8h_a5429bc841b2e0816586765f6ba37873ba199efa02bc54def32f883cc322e98068}} 
+Delta\+F\+W\+Alpha3&alpha3 coordinate in joint space, input \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdf}\label{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdf}} 
+\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Kinematics\+Output@{Delta\+F\+W\+Kinematics\+Output}}
+\index{Delta\+F\+W\+Kinematics\+Output@{Delta\+F\+W\+Kinematics\+Output}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}
+\subsubsection{\texorpdfstring{Delta\+F\+W\+Kinematics\+Output}{DeltaFWKinematicsOutput}}
+{\footnotesize\ttfamily enum \hyperlink{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdf}{Delta\+F\+W\+Kinematics\+Output}}
+
+
+
+Outputs of the delta robot forward kinematics. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+WX@{Delta\+F\+WX}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+WX@{Delta\+F\+WX}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa8cf99974c06af555face853347ca88ac}\label{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa8cf99974c06af555face853347ca88ac}} 
+Delta\+F\+WX&X coordinate in task space. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+WY@{Delta\+F\+WY}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+WY@{Delta\+F\+WY}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa6887ce9d24ae6a0134fc794f8e8cf13e}\label{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa6887ce9d24ae6a0134fc794f8e8cf13e}} 
+Delta\+F\+WY&Y coordinate in task space. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+F\+WZ@{Delta\+F\+WZ}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+WZ@{Delta\+F\+WZ}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa7b05080e6f19e7636b6516a8a6749d35}\label{_delta_f_w_kinematics_8h_a2389969aed046d0695e71c16ea9c3cdfa7b05080e6f19e7636b6516a8a6749d35}} 
+Delta\+F\+WZ&Z coordinate in task space. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398}} 
+\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+F\+W\+Kinematics\+Parameters@{Delta\+F\+W\+Kinematics\+Parameters}}
+\index{Delta\+F\+W\+Kinematics\+Parameters@{Delta\+F\+W\+Kinematics\+Parameters}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}
+\subsubsection{\texorpdfstring{Delta\+F\+W\+Kinematics\+Parameters}{DeltaFWKinematicsParameters}}
+{\footnotesize\ttfamily enum \hyperlink{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398}{Delta\+F\+W\+Kinematics\+Parameters}}
+
+
+
+$<$ Included to obtain the Kinematics struct. 
+
+Prefix Delta\+F\+W\+Kinematics Robot paramters, used to configure the Kinematics Delta\+K\+Inematics\+Parameters, this enum defines the pramters array, which contains the arm lengths, base redius, ancelle raidus, arm orientations and zoffset. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+LA@{Delta\+LA}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+LA@{Delta\+LA}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab1e1ab27428b4aa30967b52a0c996f98}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab1e1ab27428b4aa30967b52a0c996f98}} 
+Delta\+LA&Upper Arm Lenght. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+LB@{Delta\+LB}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+LB@{Delta\+LB}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab7e57ace2c87664c4c51703db60c2864}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398ab7e57ace2c87664c4c51703db60c2864}} 
+Delta\+LB&Lower Arm Length. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+RA@{Delta\+RA}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+RA@{Delta\+RA}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a5c703b33efefd0b1a952afdcfa5795e2}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a5c703b33efefd0b1a952afdcfa5795e2}} 
+Delta\+RA&Base Radius. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+RB@{Delta\+RB}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+RB@{Delta\+RB}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2cf82fa8ce70f8ba727eaff72c775985}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2cf82fa8ce70f8ba727eaff72c775985}} 
+Delta\+RB&Nacelle Radius. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+Theta1@{Delta\+Theta1}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+Theta1@{Delta\+Theta1}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a28f3684f363941e7bdab0edd7e7cb2a6}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a28f3684f363941e7bdab0edd7e7cb2a6}} 
+Delta\+Theta1&Arm orientation angle 1. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+Theta2@{Delta\+Theta2}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+Theta2@{Delta\+Theta2}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2d8093637c6e68320fb79dc7f8c49b79}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2d8093637c6e68320fb79dc7f8c49b79}} 
+Delta\+Theta2&Arm orientation angle 2. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+Theta3@{Delta\+Theta3}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+Theta3@{Delta\+Theta3}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398af064493724ed794df22e38aad1104834}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398af064493724ed794df22e38aad1104834}} 
+Delta\+Theta3&Arm orientation angle 3. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delta\+Zofset@{Delta\+Zofset}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!Delta\+Zofset@{Delta\+Zofset}}}\mbox{\Hypertarget{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2c1cb72105400ae59a0865bcdf46bb2f}\label{_delta_f_w_kinematics_8h_a69c9b5c98f1c9ea2ef6be1c258b2c398a2c1cb72105400ae59a0865bcdf46bb2f}} 
+Delta\+Zofset&Offset for the nozzle int he vertical axis. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_delta_f_w_kinematics_8h_aa76b251263bc2b2d6a1f45195e584e66}\label{_delta_f_w_kinematics_8h_aa76b251263bc2b2d6a1f45195e584e66}} 
+\index{Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}!loop\+Delta\+F\+W\+Kinematics@{loop\+Delta\+F\+W\+Kinematics}}
+\index{loop\+Delta\+F\+W\+Kinematics@{loop\+Delta\+F\+W\+Kinematics}!Delta\+F\+W\+Kinematics.\+h@{Delta\+F\+W\+Kinematics.\+h}}
+\subsubsection{\texorpdfstring{loop\+Delta\+F\+W\+Kinematics()}{loopDeltaFWKinematics()}}
+{\footnotesize\ttfamily void loop\+Delta\+F\+W\+Kinematics (\begin{DoxyParamCaption}\item[{Kinematics $\ast$}]{k }\end{DoxyParamCaption})}
+
+Delta Robot Forward Kinematics 
+\begin{DoxyParams}{Parameters}
+{\em c} & pointer to a Kinematics structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return values are contained in the Kinematics structures output array 
+\end{DoxyReturn}

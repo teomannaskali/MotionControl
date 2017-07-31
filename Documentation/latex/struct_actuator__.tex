@@ -1,0 +1,164 @@
+\hypertarget{struct_actuator__}{}\section{Actuator\+\_\+ Struct Reference}
+\label{struct_actuator__}\index{Actuator\+\_\+@{Actuator\+\_\+}}
+
+
+Actuator structure contains all the parameters states IO channels and function pointers to an actuator structure.  
+
+
+
+
+{\ttfamily \#include $<$Actuator.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_actuator___a36e00b42ebb484c40934d26848b6e662}\label{struct_actuator___a36e00b42ebb484c40934d26848b6e662}} 
+char $\ast$ \hyperlink{struct_actuator___a36e00b42ebb484c40934d26848b6e662}{name}
+\begin{DoxyCompactList}\small\item\em Name of the actuator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a8964fb4f29d5c906e628501c51171d60}\label{struct_actuator___a8964fb4f29d5c906e628501c51171d60}} 
+char $\ast$ \hyperlink{struct_actuator___a8964fb4f29d5c906e628501c51171d60}{units}
+\begin{DoxyCompactList}\small\item\em String containing units of actuator to be used for reporting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___ac01c2006287f95e953c584b49789cf91}\label{struct_actuator___ac01c2006287f95e953c584b49789cf91}} 
+double \hyperlink{struct_actuator___ac01c2006287f95e953c584b49789cf91}{input} \mbox{[}\hyperlink{_actuator_8h_a51f2ad8e0c5ac16d2715f9cf94c4dd58}{A\+C\+T\+M\+A\+X\+IN}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of inputs to the actuator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a651185d83dff257353d7ed425b8f2f47}\label{struct_actuator___a651185d83dff257353d7ed425b8f2f47}} 
+double \hyperlink{struct_actuator___a651185d83dff257353d7ed425b8f2f47}{output} \mbox{[}\hyperlink{_actuator_8h_ac9f353fdc4ab6ddd068b877c797d08a2}{A\+C\+T\+M\+A\+X\+O\+UT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of outputs of the actuator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___afca7e24efcad4fc760ab8d4a700df973}\label{struct_actuator___afca7e24efcad4fc760ab8d4a700df973}} 
+double \hyperlink{struct_actuator___afca7e24efcad4fc760ab8d4a700df973}{state} \mbox{[}\hyperlink{_actuator_8h_aa4b689fdf6fed3db04789f692cb26d62}{A\+C\+T\+M\+A\+X\+S\+T\+A\+T\+ES}\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the actuator, internal data that the actuator may need. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a0458086d5d3f6c5282c6c4e033054c08}\label{struct_actuator___a0458086d5d3f6c5282c6c4e033054c08}} 
+double \hyperlink{struct_actuator___a0458086d5d3f6c5282c6c4e033054c08}{parameter} \mbox{[}\hyperlink{_actuator_8h_ac0b3df9afc41a8edeb402e6da4c50155}{A\+C\+T\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parameters of the actuator, may include coefficients of offsets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a9aa4aa63f1f31c903fab3fcf4c41de35}\label{struct_actuator___a9aa4aa63f1f31c903fab3fcf4c41de35}} 
+int \hyperlink{struct_actuator___a9aa4aa63f1f31c903fab3fcf4c41de35}{out\+D\+IO} \mbox{[}\hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the digital output channels that the actuator may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a39e8efa83828a9673fbbb3e3956ae264}\label{struct_actuator___a39e8efa83828a9673fbbb3e3956ae264}} 
+int \hyperlink{struct_actuator___a39e8efa83828a9673fbbb3e3956ae264}{in\+D\+IO} \mbox{[}\hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the digital input channels that the actuator may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___ae7e668c591eb457d5796ca4bf3c26fbc}\label{struct_actuator___ae7e668c591eb457d5796ca4bf3c26fbc}} 
+int \hyperlink{struct_actuator___ae7e668c591eb457d5796ca4bf3c26fbc}{in\+A\+DC} \mbox{[}\hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the analog input channels that the actuator may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___ae80c165d98fce674f284b635c4604543}\label{struct_actuator___ae80c165d98fce674f284b635c4604543}} 
+int \hyperlink{struct_actuator___ae80c165d98fce674f284b635c4604543}{out\+D\+AC} \mbox{[}\hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the analog output channels that the actuator may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_actuator___a8cdde68e966d1cebb70e94d420e50114}\label{struct_actuator___a8cdde68e966d1cebb70e94d420e50114}} 
+int \hyperlink{struct_actuator___a8cdde68e966d1cebb70e94d420e50114}{in\+E\+NC} \mbox{[}\hyperlink{_actuator_8h_a124e6cd28aabeb095341daaabdef7363}{A\+C\+T\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the encoder channels that the actuator may have. \end{DoxyCompactList}\item 
+int($\ast$ \hyperlink{struct_actuator___a9dd4cdb3284c8509f72af4f4d2b316b0}{init} )(struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)
+\begin{DoxyCompactList}\small\item\em initialize the actuator \end{DoxyCompactList}\item 
+int($\ast$ \hyperlink{struct_actuator___a4180113a8996ba8269ecdc5b9b5b3baa}{write} )(struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d, double value)
+\begin{DoxyCompactList}\small\item\em write to the actuator \end{DoxyCompactList}\item 
+int($\ast$ \hyperlink{struct_actuator___ad5d2e19e23d4d49b2b5df2d2e0a0755d}{remove} )(struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)
+\begin{DoxyCompactList}\small\item\em remove actuator \end{DoxyCompactList}\item 
+int($\ast$ \hyperlink{struct_actuator___a4a10f32cb9795a3cc9f18be797a2fd8e}{reset} )(struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)
+\begin{DoxyCompactList}\small\item\em reset actuator \end{DoxyCompactList}\item 
+int($\ast$ \hyperlink{struct_actuator___ad94f7d72b09f1a8ccc779a082a685026}{set\+Parameter} )(struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d, int \hyperlink{struct_actuator___a0458086d5d3f6c5282c6c4e033054c08}{parameter}, double value)
+\begin{DoxyCompactList}\small\item\em set a parameter of the actuator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Actuator structure contains all the parameters states IO channels and function pointers to an actuator structure. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_actuator___a9dd4cdb3284c8509f72af4f4d2b316b0}\label{struct_actuator___a9dd4cdb3284c8509f72af4f4d2b316b0}} 
+\index{Actuator\+\_\+@{Actuator\+\_\+}!init@{init}}
+\index{init@{init}!Actuator\+\_\+@{Actuator\+\_\+}}
+\subsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily int($\ast$ Actuator\+\_\+\+::init) (struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)}
+
+
+
+initialize the actuator 
+
+Function pointer to initialize the actuator Initialize the necessary inputs and outputs to be utilized for this actuators 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_actuator___ad5d2e19e23d4d49b2b5df2d2e0a0755d}\label{struct_actuator___ad5d2e19e23d4d49b2b5df2d2e0a0755d}} 
+\index{Actuator\+\_\+@{Actuator\+\_\+}!remove@{remove}}
+\index{remove@{remove}!Actuator\+\_\+@{Actuator\+\_\+}}
+\subsubsection{\texorpdfstring{remove}{remove}}
+{\footnotesize\ttfamily int($\ast$ Actuator\+\_\+\+::remove) (struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)}
+
+
+
+remove actuator 
+
+Function pointer to remove function of the actuator This function performs the necessary cleanup operations of the actuator such as releasing any resources that have been taken up by the actuator, this function is called before the end of the application or when the actuator is removed from the application 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_actuator___a4a10f32cb9795a3cc9f18be797a2fd8e}\label{struct_actuator___a4a10f32cb9795a3cc9f18be797a2fd8e}} 
+\index{Actuator\+\_\+@{Actuator\+\_\+}!reset@{reset}}
+\index{reset@{reset}!Actuator\+\_\+@{Actuator\+\_\+}}
+\subsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily int($\ast$ Actuator\+\_\+\+::reset) (struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d)}
+
+
+
+reset actuator 
+
+Function pointer to reset the actuator This function performs the necessary operations to reset the actuator should it be needed to reset 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_actuator___ad94f7d72b09f1a8ccc779a082a685026}\label{struct_actuator___ad94f7d72b09f1a8ccc779a082a685026}} 
+\index{Actuator\+\_\+@{Actuator\+\_\+}!set\+Parameter@{set\+Parameter}}
+\index{set\+Parameter@{set\+Parameter}!Actuator\+\_\+@{Actuator\+\_\+}}
+\subsubsection{\texorpdfstring{set\+Parameter}{setParameter}}
+{\footnotesize\ttfamily int($\ast$ Actuator\+\_\+\+::set\+Parameter) (struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d, int \hyperlink{struct_actuator___a0458086d5d3f6c5282c6c4e033054c08}{parameter}, double value)}
+
+
+
+set a parameter of the actuator 
+
+Function pointer to set parameters of the actuator This function is used to set the parameters of the actuator 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+{\em parameter,number} & of the parameter ID to be written to the actuator \\
+\hline
+{\em value} & to be written to the parameter, parameters may be offsets or coefficients to be utilized in the actuator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_actuator___a4180113a8996ba8269ecdc5b9b5b3baa}\label{struct_actuator___a4180113a8996ba8269ecdc5b9b5b3baa}} 
+\index{Actuator\+\_\+@{Actuator\+\_\+}!write@{write}}
+\index{write@{write}!Actuator\+\_\+@{Actuator\+\_\+}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ Actuator\+\_\+\+::write) (struct \hyperlink{struct_actuator__}{Actuator\+\_\+} $\ast$d, double value)}
+
+
+
+write to the actuator 
+
+Function pointer to write to the actuator This function performs the necessary conversions and outputs to the IO cards to fulfill the actuators function 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the actuator structure \\
+\hline
+{\em value} & to be written to the actuator, the units of the value are stored in the unit field of the actuator structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\hyperlink{_actuator_8h}{Actuator.\+h}\end{DoxyCompactItemize}

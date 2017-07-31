@@ -1,0 +1,83 @@
+\hypertarget{_conveyor_stopper_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Stopper.h File Reference}
+\label{_conveyor_stopper_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Stopper.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Actuator/\+Examples/\+Conveyor\+Stopper.\+h}}
+{\ttfamily \#include \char`\"{}Actuator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}H\+W\+Wrapper.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_conveyor_stopper_8h_a79cf12935423dda413a02325f4039c11}{init\+Conveyor\+Stopper} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_stopper_8h_a2b971b59657e72739186596daed040fc}{write\+Conveyor\+Stopper} (\hyperlink{struct_actuator__}{Actuator} $\ast$d, double value)
+\item 
+int \hyperlink{_conveyor_stopper_8h_a0638fdc93b055e16707bfd84c3a20873}{remove\+Conveyor\+Stopper} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_stopper_8h_a0e1220da6c30ebd5324d688f3b06c0f7}{reset\+Conveyor\+Stopper} (\hyperlink{struct_actuator__}{Actuator} $\ast$d)
+\item 
+int \hyperlink{_conveyor_stopper_8h_a298552012aa6fda9e0a2ea7470e6b20e}{set\+Conveyor\+Stopper\+Parameter} (\hyperlink{struct_actuator__}{Actuator} $\ast$d, int parameter, double value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file is the implementation of the solenoid actuator to stop trays at the positions of a conveyor. Any solenoids may be implemented as actuators using this file 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_conveyor_stopper_8h_a79cf12935423dda413a02325f4039c11}\label{_conveyor_stopper_8h_a79cf12935423dda413a02325f4039c11}} 
+\index{Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}!init\+Conveyor\+Stopper@{init\+Conveyor\+Stopper}}
+\index{init\+Conveyor\+Stopper@{init\+Conveyor\+Stopper}!Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}}
+\subsubsection{\texorpdfstring{init\+Conveyor\+Stopper()}{initConveyorStopper()}}
+{\footnotesize\ttfamily int init\+Conveyor\+Stopper (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Addition of the actuator header file Add access to the IO cards of the system Initializes the Stopper. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+Write initialization code for the actuator \mbox{\Hypertarget{_conveyor_stopper_8h_a0638fdc93b055e16707bfd84c3a20873}\label{_conveyor_stopper_8h_a0638fdc93b055e16707bfd84c3a20873}} 
+\index{Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}!remove\+Conveyor\+Stopper@{remove\+Conveyor\+Stopper}}
+\index{remove\+Conveyor\+Stopper@{remove\+Conveyor\+Stopper}!Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}}
+\subsubsection{\texorpdfstring{remove\+Conveyor\+Stopper()}{removeConveyorStopper()}}
+{\footnotesize\ttfamily int remove\+Conveyor\+Stopper (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Removes resources allocated to the acutator if they exist. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+No resources to be remvoed \mbox{\Hypertarget{_conveyor_stopper_8h_a0e1220da6c30ebd5324d688f3b06c0f7}\label{_conveyor_stopper_8h_a0e1220da6c30ebd5324d688f3b06c0f7}} 
+\index{Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}!reset\+Conveyor\+Stopper@{reset\+Conveyor\+Stopper}}
+\index{reset\+Conveyor\+Stopper@{reset\+Conveyor\+Stopper}!Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}}
+\subsubsection{\texorpdfstring{reset\+Conveyor\+Stopper()}{resetConveyorStopper()}}
+{\footnotesize\ttfamily int reset\+Conveyor\+Stopper (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d }\end{DoxyParamCaption})}
+
+Reset the actuator 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+Conveyor stoppers do not have a reset so simply the output is set to low \mbox{\Hypertarget{_conveyor_stopper_8h_a298552012aa6fda9e0a2ea7470e6b20e}\label{_conveyor_stopper_8h_a298552012aa6fda9e0a2ea7470e6b20e}} 
+\index{Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}!set\+Conveyor\+Stopper\+Parameter@{set\+Conveyor\+Stopper\+Parameter}}
+\index{set\+Conveyor\+Stopper\+Parameter@{set\+Conveyor\+Stopper\+Parameter}!Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}}
+\subsubsection{\texorpdfstring{set\+Conveyor\+Stopper\+Parameter()}{setConveyorStopperParameter()}}
+{\footnotesize\ttfamily int set\+Conveyor\+Stopper\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d,  }\item[{int}]{parameter,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Sets a parameter of the conveyor stopper. 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+\end{DoxyParams}
+The conveyor stopper does not have a value \mbox{\Hypertarget{_conveyor_stopper_8h_a2b971b59657e72739186596daed040fc}\label{_conveyor_stopper_8h_a2b971b59657e72739186596daed040fc}} 
+\index{Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}!write\+Conveyor\+Stopper@{write\+Conveyor\+Stopper}}
+\index{write\+Conveyor\+Stopper@{write\+Conveyor\+Stopper}!Conveyor\+Stopper.\+h@{Conveyor\+Stopper.\+h}}
+\subsubsection{\texorpdfstring{write\+Conveyor\+Stopper()}{writeConveyorStopper()}}
+{\footnotesize\ttfamily int write\+Conveyor\+Stopper (\begin{DoxyParamCaption}\item[{\hyperlink{struct_actuator__}{Actuator} $\ast$}]{d,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+Makes the Actuator write its output to its output medium. This funciton outputs to the IO cards, the wrapper template must be included in the project beforehand 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to an actuator structure as defined in \hyperlink{_actuator_8h}{Actuator.\+h} \\
+\hline
+{\em value} & value to be output to the io card \\
+\hline
+\end{DoxyParams}
+Scale the input value and output it to the IO card
+
+Perform necessary conversions 

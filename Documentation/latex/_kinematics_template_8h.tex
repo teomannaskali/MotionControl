@@ -1,0 +1,89 @@
+\hypertarget{_kinematics_template_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics\+Template.h File Reference}
+\label{_kinematics_template_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics\+Template.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics\+Template.\+h}}
+
+
+This is a template file to generate Kinematics structure.  
+
+
+{\ttfamily \#include \char`\"{}Kinematics.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_kinematics_template_8h_ad1fa123ff6c7680b46e8d4f786c7ef6a}{Kinematics\+Parameters} \{ {\bfseries parameter1}, 
+{\bfseries parameter2}
+ \}\begin{DoxyCompactList}\small\item\em Prefix Use a 3 letter prefix for the customizations. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_kinematics_template_8h_af9d792b38924597129e13b33ffa98e23}\label{_kinematics_template_8h_af9d792b38924597129e13b33ffa98e23}} 
+enum \hyperlink{_kinematics_template_8h_af9d792b38924597129e13b33ffa98e23}{Kinematics\+States} \{ {\bfseries state1}, 
+{\bfseries state2}
+ \}\begin{DoxyCompactList}\small\item\em Kinematics states, used to store data between iterations of the loop to obtain derivative values. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_kinematics_template_8h_a72eeed8b40df675b4f725557653a6587}\label{_kinematics_template_8h_a72eeed8b40df675b4f725557653a6587}} 
+enum \hyperlink{_kinematics_template_8h_a72eeed8b40df675b4f725557653a6587}{Kinematics\+Input} \{ {\bfseries reference}, 
+{\bfseries position}
+ \}\begin{DoxyCompactList}\small\item\em Inputs to the control function. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7}{Kinematics\+Output} \{ {\bfseries Kinematics\+\_\+x}, 
+{\bfseries Kinematics\+\_\+y}, 
+\hyperlink{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7a368d3c57642a1c4650408970e1d7a80c}{Kinematics\+\_\+z}
+ \}\begin{DoxyCompactList}\small\item\em Outputs of the control algorithm. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_kinematics_template_8h_a143ed8ba55370a142819ac0abff7dba8}{loop\+Kinematics} (Kinematics $\ast$c)
+\item 
+\mbox{\Hypertarget{_kinematics_template_8h_af98a55587e79cfa9a74495e6ea863a3e}\label{_kinematics_template_8h_af98a55587e79cfa9a74495e6ea863a3e}} 
+void \hyperlink{_kinematics_template_8h_af98a55587e79cfa9a74495e6ea863a3e}{set\+Kinematics\+Parameters} (Kinematics $\ast$c)
+\begin{DoxyCompactList}\small\item\em Set Kinematicss parameters. Parameters may be configured with a separate function. Optional function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a template file to generate Kinematics structure. 
+
+A Kinematics function is implemented in this file. The Kinematics function is based around the Kinematics structure, int receives its inputs from the input array and it writes its outputs to the output array. The states and parameters of the Kinematics funciton are also stored 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7}\label{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7}} 
+\index{Kinematics\+Template.\+h@{Kinematics\+Template.\+h}!Kinematics\+Output@{Kinematics\+Output}}
+\index{Kinematics\+Output@{Kinematics\+Output}!Kinematics\+Template.\+h@{Kinematics\+Template.\+h}}
+\subsubsection{\texorpdfstring{Kinematics\+Output}{KinematicsOutput}}
+{\footnotesize\ttfamily enum \hyperlink{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7}{Kinematics\+Output}}
+
+
+
+Outputs of the control algorithm. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Kinematics\+\_\+z@{Kinematics\+\_\+z}!Kinematics\+Template.\+h@{Kinematics\+Template.\+h}}\index{Kinematics\+Template.\+h@{Kinematics\+Template.\+h}!Kinematics\+\_\+z@{Kinematics\+\_\+z}}}\mbox{\Hypertarget{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7a368d3c57642a1c4650408970e1d7a80c}\label{_kinematics_template_8h_a1380c6b062377c61183c2784ab0a16a7a368d3c57642a1c4650408970e1d7a80c}} 
+Kinematics\+\_\+z&Control output of control function. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_kinematics_template_8h_ad1fa123ff6c7680b46e8d4f786c7ef6a}\label{_kinematics_template_8h_ad1fa123ff6c7680b46e8d4f786c7ef6a}} 
+\index{Kinematics\+Template.\+h@{Kinematics\+Template.\+h}!Kinematics\+Parameters@{Kinematics\+Parameters}}
+\index{Kinematics\+Parameters@{Kinematics\+Parameters}!Kinematics\+Template.\+h@{Kinematics\+Template.\+h}}
+\subsubsection{\texorpdfstring{Kinematics\+Parameters}{KinematicsParameters}}
+{\footnotesize\ttfamily enum \hyperlink{_kinematics_template_8h_ad1fa123ff6c7680b46e8d4f786c7ef6a}{Kinematics\+Parameters}}
+
+
+
+Prefix Use a 3 letter prefix for the customizations. 
+
+Kinematics parameters, used to configure the Kinematics 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_kinematics_template_8h_a143ed8ba55370a142819ac0abff7dba8}\label{_kinematics_template_8h_a143ed8ba55370a142819ac0abff7dba8}} 
+\index{Kinematics\+Template.\+h@{Kinematics\+Template.\+h}!loop\+Kinematics@{loop\+Kinematics}}
+\index{loop\+Kinematics@{loop\+Kinematics}!Kinematics\+Template.\+h@{Kinematics\+Template.\+h}}
+\subsubsection{\texorpdfstring{loop\+Kinematics()}{loopKinematics()}}
+{\footnotesize\ttfamily void loop\+Kinematics (\begin{DoxyParamCaption}\item[{Kinematics $\ast$}]{c }\end{DoxyParamCaption})}
+
+Kinematics algorithm 
+\begin{DoxyParams}{Parameters}
+{\em c} & pointer to a Kinematics structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return values are contained in the Kinematics structures output array 
+\end{DoxyReturn}

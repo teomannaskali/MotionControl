@@ -1,0 +1,93 @@
+\hypertarget{_conveyor_mechanism_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Examples/\+Conveyor\+Mechanism.h File Reference}
+\label{_conveyor_mechanism_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Examples/\+Conveyor\+Mechanism.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Mechanism/\+Examples/\+Conveyor\+Mechanism.\+h}}
+
+
+This file creates the conveyor mechanism that is utilized in a Micro Factory. The conveyor has 1 motor, 3 stoppers and 3 sensors to sense trays at the stopper locations.  
+
+
+{\ttfamily \#include \char`\"{}Mechanism.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Conveyor\+Stopper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Conveyor\+Motor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Conveyor\+Station.\+h\char`\"{}}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_ad78422d08456288e843ec699f23213e2}\label{_conveyor_mechanism_8h_ad78422d08456288e843ec699f23213e2}} 
+enum \hyperlink{_conveyor_mechanism_8h_ad78422d08456288e843ec699f23213e2}{Conveyor\+Mechanism\+Actuators} \{ {\bfseries C\+M\+\_\+\+Stopper1}, 
+{\bfseries C\+M\+\_\+\+Stopper2}, 
+{\bfseries C\+M\+\_\+\+Stopper3}, 
+{\bfseries C\+M\+\_\+\+Motor}
+ \}\begin{DoxyCompactList}\small\item\em Enumeration of the conveyors actuators. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_a807aa413c244ce29f671de3b1bd607f4}\label{_conveyor_mechanism_8h_a807aa413c244ce29f671de3b1bd607f4}} 
+enum \hyperlink{_conveyor_mechanism_8h_a807aa413c244ce29f671de3b1bd607f4}{Conveyor\+Mechanism\+Sensors} \{ {\bfseries C\+M\+\_\+\+Station1}, 
+{\bfseries C\+M\+\_\+\+Station2}, 
+{\bfseries C\+M\+\_\+\+Station3}
+ \}\begin{DoxyCompactList}\small\item\em Enumeration of the conveyors sensors. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_a70bb16f6c9246035b27a515ef96f1f16}\label{_conveyor_mechanism_8h_a70bb16f6c9246035b27a515ef96f1f16}} 
+enum \hyperlink{_conveyor_mechanism_8h_a70bb16f6c9246035b27a515ef96f1f16}{Conveyor\+Mechanism\+Inputs} \{ {\bfseries Conveyor\+Speed}, 
+{\bfseries Conveyor\+Station}
+ \}\begin{DoxyCompactList}\small\item\em Mechanism\+Parameters define what the parameters of this mechanism. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_acfdac2d9435cc19afd378281ed953b2f}\label{_conveyor_mechanism_8h_acfdac2d9435cc19afd378281ed953b2f}} 
+enum \hyperlink{_conveyor_mechanism_8h_acfdac2d9435cc19afd378281ed953b2f}{Conveyor\+Mechanism\+States} \{ {\bfseries Station}
+ \}\begin{DoxyCompactList}\small\item\em Mechanism\+States define what the states of this mechanims are. \end{DoxyCompactList}
+\item 
+enum \hyperlink{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43}{Conveyor\+State\+Machine\+States} \{ {\bfseries C\+M\+\_\+\+Inactive}, 
+{\bfseries C\+M\+\_\+\+Initialize}, 
+{\bfseries C\+M\+\_\+\+Move\+To}, 
+\hyperlink{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43a20316b7044a9da307f8e1d5a590fd71d}{C\+M\+\_\+\+Move}
+ \}\begin{DoxyCompactList}\small\item\em Mechanism\+State\+Machine\+States are the states of the State Machine within the mechanism. The state machine of the mechanims is utilized to command the mechanism from one state to the other. The default states of the state machine are inactive and initialize. Depending on the needs of the mechanism the states should also include following position references and following speed references. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_conveyor_mechanism_8h_ae64332ce8bb2b98515f0909809388e86}{loop\+Conveyor\+Mechanism} (\hyperlink{struct_mechanism__}{Mechanism} $\ast$M)
+\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_a9576c158a4521b19e98492fcc11e7afc}\label{_conveyor_mechanism_8h_a9576c158a4521b19e98492fcc11e7afc}} 
+int \hyperlink{_conveyor_mechanism_8h_a9576c158a4521b19e98492fcc11e7afc}{setup\+Conveyor} (\hyperlink{struct_mechanism__}{Mechanism} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Setup Converor function is used to assign values and fill the actuators within the mechanism structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_conveyor_mechanism_8h_a1b37feadfaa88d252c9f57222cf71557}\label{_conveyor_mechanism_8h_a1b37feadfaa88d252c9f57222cf71557}} 
+int {\bfseries set\+Conveyor\+Move\+To} (\hyperlink{struct_mechanism__}{Mechanism} $\ast$M, int station, double speed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file creates the conveyor mechanism that is utilized in a Micro Factory. The conveyor has 1 motor, 3 stoppers and 3 sensors to sense trays at the stopper locations. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43}\label{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43}} 
+\index{Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}!Conveyor\+State\+Machine\+States@{Conveyor\+State\+Machine\+States}}
+\index{Conveyor\+State\+Machine\+States@{Conveyor\+State\+Machine\+States}!Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}}
+\subsubsection{\texorpdfstring{Conveyor\+State\+Machine\+States}{ConveyorStateMachineStates}}
+{\footnotesize\ttfamily enum \hyperlink{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43}{Conveyor\+State\+Machine\+States}}
+
+
+
+Mechanism\+State\+Machine\+States are the states of the State Machine within the mechanism. The state machine of the mechanims is utilized to command the mechanism from one state to the other. The default states of the state machine are inactive and initialize. Depending on the needs of the mechanism the states should also include following position references and following speed references. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+M\+\_\+\+Move@{C\+M\+\_\+\+Move}!Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}}\index{Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}!C\+M\+\_\+\+Move@{C\+M\+\_\+\+Move}}}\mbox{\Hypertarget{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43a20316b7044a9da307f8e1d5a590fd71d}\label{_conveyor_mechanism_8h_a260b68dcfcf18c4104f4267338661b43a20316b7044a9da307f8e1d5a590fd71d}} 
+C\+M\+\_\+\+Move&fill in the other states \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_conveyor_mechanism_8h_ae64332ce8bb2b98515f0909809388e86}\label{_conveyor_mechanism_8h_ae64332ce8bb2b98515f0909809388e86}} 
+\index{Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}!loop\+Conveyor\+Mechanism@{loop\+Conveyor\+Mechanism}}
+\index{loop\+Conveyor\+Mechanism@{loop\+Conveyor\+Mechanism}!Conveyor\+Mechanism.\+h@{Conveyor\+Mechanism.\+h}}
+\subsubsection{\texorpdfstring{loop\+Conveyor\+Mechanism()}{loopConveyorMechanism()}}
+{\footnotesize\ttfamily int loop\+Conveyor\+Mechanism (\begin{DoxyParamCaption}\item[{\hyperlink{struct_mechanism__}{Mechanism} $\ast$}]{M }\end{DoxyParamCaption})}
+
+Perform initialization of actuators sensors axes etc...
+
+get reference for the manipulator
+
+Transform the coordinate references to axis references
+
+Command axees 

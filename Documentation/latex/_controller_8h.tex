@@ -1,0 +1,39 @@
+\hypertarget{_controller_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller.h File Reference}
+\label{_controller_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Controller/\+Controller.\+h}}
+
+
+General definition of a controller containing the data structures.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_controller__}{Controller\+\_\+}
+\begin{DoxyCompactList}\small\item\em Controller Structure contains the necessary data to run a controller. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the controller structure during runtime. States of a controller contain the internal varying data and parameters of the controller contain the values are used to tune the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_controller_8h_a04568a04d0e6ded244439a34423369a6}\label{_controller_8h_a04568a04d0e6ded244439a34423369a6}} 
+\#define {\bfseries C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}~10
+\item 
+\mbox{\Hypertarget{_controller_8h_a98f22bbd2278f104034e716bcd42fa8f}\label{_controller_8h_a98f22bbd2278f104034e716bcd42fa8f}} 
+\#define {\bfseries C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+S\+T\+A\+T\+ES}~10
+\item 
+\mbox{\Hypertarget{_controller_8h_a11af042796d57e71ed4d89400ead6306}\label{_controller_8h_a11af042796d57e71ed4d89400ead6306}} 
+\#define {\bfseries C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+IN}~10
+\item 
+\mbox{\Hypertarget{_controller_8h_ae1511e75d60cc93d431ef1bfdee656c4}\label{_controller_8h_ae1511e75d60cc93d431ef1bfdee656c4}} 
+\#define {\bfseries C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+M\+A\+X\+O\+UT}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_controller_8h_a6f7f4fe3cb68bcbf739b73e9f12b508c}\label{_controller_8h_a6f7f4fe3cb68bcbf739b73e9f12b508c}} 
+typedef struct \hyperlink{struct_controller__}{Controller\+\_\+} {\bfseries Controller}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General definition of a controller containing the data structures. 
+
+A controller structure contains the states and parameters a controller. The controller structure also has a function pointer to attach an algorithm loop function that is executed in every loop. 

@@ -1,0 +1,61 @@
+\hypertarget{struct_sensor__}{}\section{Sensor\+\_\+ Struct Reference}
+\label{struct_sensor__}\index{Sensor\+\_\+@{Sensor\+\_\+}}
+
+
+Sensor structure contains all the parameters and states of the sesor. The sensor sturcutre also contains the input and output channel numbers for a sensor along with function pointers to functions of the sensor to initialize, read, reset and delete the sensor.  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_sensor___a6f92232276258bcd8651226b9e41dc28}\label{struct_sensor___a6f92232276258bcd8651226b9e41dc28}} 
+char $\ast$ \hyperlink{struct_sensor___a6f92232276258bcd8651226b9e41dc28}{name}
+\begin{DoxyCompactList}\small\item\em String representing the name of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a8e90ba064a85a2da2e7d9cc7c880c5d4}\label{struct_sensor___a8e90ba064a85a2da2e7d9cc7c880c5d4}} 
+char $\ast$ \hyperlink{struct_sensor___a8e90ba064a85a2da2e7d9cc7c880c5d4}{unit}
+\begin{DoxyCompactList}\small\item\em String containing the units of the sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a5c9bc879e2ecade4a96a3100cc63c92c}\label{struct_sensor___a5c9bc879e2ecade4a96a3100cc63c92c}} 
+int \hyperlink{struct_sensor___a5c9bc879e2ecade4a96a3100cc63c92c}{out\+D\+IO} \mbox{[}\hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the digital output channels that the sensor may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a6cb0fcb478a4d453ef3eb71a5a513b5d}\label{struct_sensor___a6cb0fcb478a4d453ef3eb71a5a513b5d}} 
+int \hyperlink{struct_sensor___a6cb0fcb478a4d453ef3eb71a5a513b5d}{in\+D\+IO} \mbox{[}\hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the digital input channels that the sensor may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a0d9e4ea7c43666e3738f1dbef509ad02}\label{struct_sensor___a0d9e4ea7c43666e3738f1dbef509ad02}} 
+int \hyperlink{struct_sensor___a0d9e4ea7c43666e3738f1dbef509ad02}{in\+A\+DC} \mbox{[}\hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the analog input channels that the sensor may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a143ba379d8bc7cb5b73fe11f1ee26820}\label{struct_sensor___a143ba379d8bc7cb5b73fe11f1ee26820}} 
+int \hyperlink{struct_sensor___a143ba379d8bc7cb5b73fe11f1ee26820}{out\+D\+AC} \mbox{[}\hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the analog output channels that the sensor may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___ab87f972a28ac0e2014c595c723d0360f}\label{struct_sensor___ab87f972a28ac0e2014c595c723d0360f}} 
+int \hyperlink{struct_sensor___ab87f972a28ac0e2014c595c723d0360f}{in\+E\+NC} \mbox{[}\hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of the encoder channels that the sensor may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a8c505bc8e3393890fa5977dd12a69bc7}\label{struct_sensor___a8c505bc8e3393890fa5977dd12a69bc7}} 
+double inputs double \hyperlink{struct_sensor___a8c505bc8e3393890fa5977dd12a69bc7}{state} \mbox{[}\hyperlink{_sensor_8h_aaef3a6b7d94f6c074a095cf402af34e8}{S\+E\+N\+S\+M\+A\+X\+S\+T\+A\+T\+ES}\mbox{]}
+\begin{DoxyCompactList}\small\item\em States of the sensor, internal data to keep log of values or other necessary information on a sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a9daac12cfa19a687feaefc738aaf535a}\label{struct_sensor___a9daac12cfa19a687feaefc738aaf535a}} 
+double \hyperlink{struct_sensor___a9daac12cfa19a687feaefc738aaf535a}{parameter} \mbox{[}\hyperlink{_sensor_8h_ae574c15d7c9187dd43836c1b97371720}{S\+E\+N\+S\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Parameters of the sensor, may include coefficients of offsets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___ad81466de42945848f10d36d377b524d3}\label{struct_sensor___ad81466de42945848f10d36d377b524d3}} 
+double($\ast$ \hyperlink{struct_sensor___ad81466de42945848f10d36d377b524d3}{read} )(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Function pointer to the function that will perform reading a sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a4e7153724f8cadbba60592be9d1e5314}\label{struct_sensor___a4e7153724f8cadbba60592be9d1e5314}} 
+int($\ast$ \hyperlink{struct_sensor___a4e7153724f8cadbba60592be9d1e5314}{set\+Parameter} )(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s, int \hyperlink{struct_sensor___a9daac12cfa19a687feaefc738aaf535a}{parameter}, double value)
+\begin{DoxyCompactList}\small\item\em Function pointer to the function that will set a parameter of the sensor. This function is used to set the different parameters of a sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a76cd20fad5d4f00d0c62171c624447fd}\label{struct_sensor___a76cd20fad5d4f00d0c62171c624447fd}} 
+int($\ast$ \hyperlink{struct_sensor___a76cd20fad5d4f00d0c62171c624447fd}{reset} )(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Function pointer to the function that will reset a sensor. May be used in case of sensor errors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_sensor___a37dd197f3370d6023b3eb53111f24e3c}\label{struct_sensor___a37dd197f3370d6023b3eb53111f24e3c}} 
+int($\ast$ \hyperlink{struct_sensor___a37dd197f3370d6023b3eb53111f24e3c}{remove} )(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Function pointer to the function that removes a sensor. This function is called when the application is shutting down or when the sensor is no longer needed and is removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor structure contains all the parameters and states of the sesor. The sensor sturcutre also contains the input and output channel numbers for a sensor along with function pointers to functions of the sensor to initialize, read, reset and delete the sensor. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/teo/\+Documents/\+Motion\+Control/\+Sensor/\hyperlink{_sensor_8h}{Sensor.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\hypertarget{_kinematics_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics.h File Reference}
+\label{_kinematics_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Kinematics/\+Kinematics.\+h}}
+
+
+General definition of forward or reverse kinematics, containing the data structures.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_kinematcis__}{Kinematcis\+\_\+}
+\begin{DoxyCompactList}\small\item\em Kinematics Structure contains the necessary data to run Kinematics. It is composed of four main parts. Input and Output arrays are utilized to exchange data to and from the Kinematics structure during runtime. States of Kinematics contain the internal varying data and parameters of Kinematics contain the values that are used to configure the Kinematics structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_kinematics_8h_aa0febc451f498c7b3fab6dcbec0af23c}\label{_kinematics_8h_aa0febc451f498c7b3fab6dcbec0af23c}} 
+\#define {\bfseries K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}~10
+\item 
+\mbox{\Hypertarget{_kinematics_8h_aad2a145e2fbccc677df70b497e289623}\label{_kinematics_8h_aad2a145e2fbccc677df70b497e289623}} 
+\#define {\bfseries K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+S\+T\+A\+T\+ES}~10
+\item 
+\mbox{\Hypertarget{_kinematics_8h_ade8fb07fa572dd7e7c90e9638a4f7065}\label{_kinematics_8h_ade8fb07fa572dd7e7c90e9638a4f7065}} 
+\#define {\bfseries K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+IN}~10
+\item 
+\mbox{\Hypertarget{_kinematics_8h_a1698727c7dcaf0de44c945b31fd16b7e}\label{_kinematics_8h_a1698727c7dcaf0de44c945b31fd16b7e}} 
+\#define {\bfseries K\+I\+N\+E\+M\+A\+T\+I\+C\+S\+M\+A\+X\+O\+UT}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_kinematics_8h_a55302f0e7510a1f3fd9c46dc80956c28}\label{_kinematics_8h_a55302f0e7510a1f3fd9c46dc80956c28}} 
+typedef struct Kinematics\+\_\+ {\bfseries Kinematics}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General definition of forward or reverse kinematics, containing the data structures. 
+
+A Kinematics structure contains the states and parameters of funtions needed to perform Kinematics operations. The Kinematics structure also has a function pointer to attach an algorithm loop function that is executed in every loop. 

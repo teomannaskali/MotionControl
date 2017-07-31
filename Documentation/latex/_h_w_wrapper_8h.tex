@@ -1,0 +1,415 @@
+\hypertarget{_h_w_wrapper_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Wrapper/\+Examples/\+H\+W\+Wrapper.h File Reference}
+\label{_h_w_wrapper_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Wrapper/\+Examples/\+H\+W\+Wrapper.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Wrapper/\+Examples/\+H\+W\+Wrapper.\+h}}
+
+
+T\+His file is a dummy for test purposes and only printsout Header File For the Hardware Wrappers of motion control projects This file is to be used as a template for the development of various projects that involve hardware Objective is to create a standardized hardware functions that have the same name in all projects.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_h_w_wrapper_8h_aa20bc1b6917351bfc8367dbb0acd7fb1}{init\+Hardware} ()
+\begin{DoxyCompactList}\small\item\em Initialize the hardware that will interface for the wrapper. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a9f8e9d5d0dfb59996cb84afa823e4fe0}{delete\+Hardware} ()
+\begin{DoxyCompactList}\small\item\em Celanup and free the resoruces allocated for the hardware. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a985300d476d705156a98d8a86d6bcc56}{init\+Enocder} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the specified encoder channel. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a60bf42f7fe8f6e8a7f4f143ce6c4f939}{set\+Encoder} (int channel, int encvalue)
+\begin{DoxyCompactList}\small\item\em Sets a value to the specified encoder channel. Used for homing the encoder channel. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_aefdefaf32422763597217d48133599a6}{get\+Encoder} (int channel)
+\begin{DoxyCompactList}\small\item\em Gets the pulse number in the encoder hardware. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a077078ae30441df2e87b8e4038528ac2}{init\+Encoder\+Metric\+Reader} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Encoder Metric Reader. Encoder Metric Reader reads the encoder and returns a value that is converted to the desired metric, such as angles, radians, millimeters or micrometers etc. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a1841c1de89be8fc68e8fbbd8b68bd6f5}{set\+Encoder\+Metric\+Reader} (int channel, float enc2metric)
+\begin{DoxyCompactList}\small\item\em Sets the conversion factor for the Encoder Metric Reader. \end{DoxyCompactList}\item 
+float \hyperlink{_h_w_wrapper_8h_a15b8d718208ea799ebd8e63ddbf6c7ef}{get\+Encoder\+In\+Metric} (int channel)
+\begin{DoxyCompactList}\small\item\em Gets the metric that has been converted from the encoder. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a59b0ff1ec38c82535b23eda1d3611c89}{init\+Velocity\+Reader} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Velocity Reading fucntion. Calculates or estimates the velocity using hardware. \end{DoxyCompactList}\item 
+float \hyperlink{_h_w_wrapper_8h_a3094f8d240bf50c7b52d7800c9957fc6}{get\+Velocity} (int channel)
+\begin{DoxyCompactList}\small\item\em Gets the Velocity that has been calculate by the hardware. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a6ab13495db6080f7ab1ebadefb65b3d4}{init\+Analog\+Output} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Analog output circuit. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_aaca68d8b86baf37f63169dcb2835d04e}{set\+Analog\+Output} (int channel, float Volts)
+\begin{DoxyCompactList}\small\item\em Sets the value for analog output. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_aba6ef16754dbd52355ab2008d171dd6b}{init\+Analog\+Input} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Analog Input circuits. \end{DoxyCompactList}\item 
+float \hyperlink{_h_w_wrapper_8h_a12a2a247c270d2bef2f57b0efb9f6ffc}{get\+Analog\+Input} (int channel)
+\begin{DoxyCompactList}\small\item\em Gets the Analog input. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_ae702eeea910f13e020bb5b8fad0b7b4f}{init\+Digital\+Input} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Digital Input Circuits. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a85dba008e88a6c2070a141a6a87fda76}{get\+Digital\+Input} (int channel)
+\begin{DoxyCompactList}\small\item\em Gets the Digitial input. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_ac660704315dde24dc2c926cae21f2a23}{init\+Digital\+Output} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the Digital Output circuit. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a7c620251f9ffa5dac3a4219a087b1e3b}{set\+Digital\+Output} (int channel, int value)
+\begin{DoxyCompactList}\small\item\em Sets the Digital Output. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_a2581e690d2351a397cd97f23c549ff98}{init\+P\+WM} (int channel)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+WM circuit. \end{DoxyCompactList}\item 
+int \hyperlink{_h_w_wrapper_8h_aec2c86cbe716076411d7c03f006cc2c9}{set\+P\+WM} (int channel, int value)
+\begin{DoxyCompactList}\small\item\em Sets the P\+WM output value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+His file is a dummy for test purposes and only printsout Header File For the Hardware Wrappers of motion control projects This file is to be used as a template for the development of various projects that involve hardware Objective is to create a standardized hardware functions that have the same name in all projects. 
+
+Created by Teoman Naskali on 14/10/10. Copyright Sabanci University 2010. All rights reserved. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a9f8e9d5d0dfb59996cb84afa823e4fe0}\label{_h_w_wrapper_8h_a9f8e9d5d0dfb59996cb84afa823e4fe0}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!delete\+Hardware@{delete\+Hardware}}
+\index{delete\+Hardware@{delete\+Hardware}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{delete\+Hardware()}{deleteHardware()}}
+{\footnotesize\ttfamily int delete\+Hardware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Celanup and free the resoruces allocated for the hardware. 
+
+Delete Hardware \begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a12a2a247c270d2bef2f57b0efb9f6ffc}\label{_h_w_wrapper_8h_a12a2a247c270d2bef2f57b0efb9f6ffc}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!get\+Analog\+Input@{get\+Analog\+Input}}
+\index{get\+Analog\+Input@{get\+Analog\+Input}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{get\+Analog\+Input()}{getAnalogInput()}}
+{\footnotesize\ttfamily float get\+Analog\+Input (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the Analog input. 
+
+Get Analog Input 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Analog input in volts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a85dba008e88a6c2070a141a6a87fda76}\label{_h_w_wrapper_8h_a85dba008e88a6c2070a141a6a87fda76}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!get\+Digital\+Input@{get\+Digital\+Input}}
+\index{get\+Digital\+Input@{get\+Digital\+Input}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{get\+Digital\+Input()}{getDigitalInput()}}
+{\footnotesize\ttfamily int get\+Digital\+Input (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the Digitial input. 
+
+Get Digital Input 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_aefdefaf32422763597217d48133599a6}\label{_h_w_wrapper_8h_aefdefaf32422763597217d48133599a6}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!get\+Encoder@{get\+Encoder}}
+\index{get\+Encoder@{get\+Encoder}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{get\+Encoder()}{getEncoder()}}
+{\footnotesize\ttfamily int get\+Encoder (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the pulse number in the encoder hardware. 
+
+Get Encoder Value 
+\begin{DoxyParams}{Parameters}
+{\em channel} & is the channel number to be read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoder pulses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a15b8d718208ea799ebd8e63ddbf6c7ef}\label{_h_w_wrapper_8h_a15b8d718208ea799ebd8e63ddbf6c7ef}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!get\+Encoder\+In\+Metric@{get\+Encoder\+In\+Metric}}
+\index{get\+Encoder\+In\+Metric@{get\+Encoder\+In\+Metric}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{get\+Encoder\+In\+Metric()}{getEncoderInMetric()}}
+{\footnotesize\ttfamily float get\+Encoder\+In\+Metric (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the metric that has been converted from the encoder. 
+
+Get Encoder in Metric 
+\begin{DoxyParams}{Parameters}
+{\em channel} & number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+metric derived from pulses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a3094f8d240bf50c7b52d7800c9957fc6}\label{_h_w_wrapper_8h_a3094f8d240bf50c7b52d7800c9957fc6}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{get\+Velocity()}{getVelocity()}}
+{\footnotesize\ttfamily float get\+Velocity (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Gets the Velocity that has been calculate by the hardware. 
+
+Get Velocity 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_aba6ef16754dbd52355ab2008d171dd6b}\label{_h_w_wrapper_8h_aba6ef16754dbd52355ab2008d171dd6b}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Analog\+Input@{init\+Analog\+Input}}
+\index{init\+Analog\+Input@{init\+Analog\+Input}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Analog\+Input()}{initAnalogInput()}}
+{\footnotesize\ttfamily int init\+Analog\+Input (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Analog Input circuits. 
+
+Initialize Analog Inputs 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a6ab13495db6080f7ab1ebadefb65b3d4}\label{_h_w_wrapper_8h_a6ab13495db6080f7ab1ebadefb65b3d4}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Analog\+Output@{init\+Analog\+Output}}
+\index{init\+Analog\+Output@{init\+Analog\+Output}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Analog\+Output()}{initAnalogOutput()}}
+{\footnotesize\ttfamily int init\+Analog\+Output (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Analog output circuit. 
+
+Initialize Analog Output 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_ae702eeea910f13e020bb5b8fad0b7b4f}\label{_h_w_wrapper_8h_ae702eeea910f13e020bb5b8fad0b7b4f}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Digital\+Input@{init\+Digital\+Input}}
+\index{init\+Digital\+Input@{init\+Digital\+Input}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Digital\+Input()}{initDigitalInput()}}
+{\footnotesize\ttfamily int init\+Digital\+Input (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Digital Input Circuits. 
+
+Initialize Digital Input 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_ac660704315dde24dc2c926cae21f2a23}\label{_h_w_wrapper_8h_ac660704315dde24dc2c926cae21f2a23}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Digital\+Output@{init\+Digital\+Output}}
+\index{init\+Digital\+Output@{init\+Digital\+Output}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Digital\+Output()}{initDigitalOutput()}}
+{\footnotesize\ttfamily int init\+Digital\+Output (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Digital Output circuit. 
+
+Initialize Digital Output 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a077078ae30441df2e87b8e4038528ac2}\label{_h_w_wrapper_8h_a077078ae30441df2e87b8e4038528ac2}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Encoder\+Metric\+Reader@{init\+Encoder\+Metric\+Reader}}
+\index{init\+Encoder\+Metric\+Reader@{init\+Encoder\+Metric\+Reader}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Encoder\+Metric\+Reader()}{initEncoderMetricReader()}}
+{\footnotesize\ttfamily int init\+Encoder\+Metric\+Reader (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Encoder Metric Reader. Encoder Metric Reader reads the encoder and returns a value that is converted to the desired metric, such as angles, radians, millimeters or micrometers etc. 
+
+Initialize Encoder Metric Reader 
+\begin{DoxyParams}{Parameters}
+{\em channel} & is the encoder channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoder pulses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a985300d476d705156a98d8a86d6bcc56}\label{_h_w_wrapper_8h_a985300d476d705156a98d8a86d6bcc56}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Enocder@{init\+Enocder}}
+\index{init\+Enocder@{init\+Enocder}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Enocder()}{initEnocder()}}
+{\footnotesize\ttfamily int init\+Enocder (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the specified encoder channel. 
+
+Initialize Encoder 
+\begin{DoxyParams}{Parameters}
+{\em channel} & the encoder channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_aa20bc1b6917351bfc8367dbb0acd7fb1}\label{_h_w_wrapper_8h_aa20bc1b6917351bfc8367dbb0acd7fb1}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Hardware@{init\+Hardware}}
+\index{init\+Hardware@{init\+Hardware}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Hardware()}{initHardware()}}
+{\footnotesize\ttfamily int init\+Hardware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the hardware that will interface for the wrapper. 
+
+Initialize Hardware \begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a2581e690d2351a397cd97f23c549ff98}\label{_h_w_wrapper_8h_a2581e690d2351a397cd97f23c549ff98}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+P\+WM@{init\+P\+WM}}
+\index{init\+P\+WM@{init\+P\+WM}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+P\+W\+M()}{initPWM()}}
+{\footnotesize\ttfamily int init\+P\+WM (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the P\+WM circuit. 
+
+Initialize P\+WM 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a59b0ff1ec38c82535b23eda1d3611c89}\label{_h_w_wrapper_8h_a59b0ff1ec38c82535b23eda1d3611c89}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!init\+Velocity\+Reader@{init\+Velocity\+Reader}}
+\index{init\+Velocity\+Reader@{init\+Velocity\+Reader}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{init\+Velocity\+Reader()}{initVelocityReader()}}
+{\footnotesize\ttfamily int init\+Velocity\+Reader (\begin{DoxyParamCaption}\item[{int}]{channel }\end{DoxyParamCaption})}
+
+
+
+Initializes the Velocity Reading fucntion. Calculates or estimates the velocity using hardware. 
+
+Initialize Velocity Reader 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_aaca68d8b86baf37f63169dcb2835d04e}\label{_h_w_wrapper_8h_aaca68d8b86baf37f63169dcb2835d04e}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!set\+Analog\+Output@{set\+Analog\+Output}}
+\index{set\+Analog\+Output@{set\+Analog\+Output}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{set\+Analog\+Output()}{setAnalogOutput()}}
+{\footnotesize\ttfamily int set\+Analog\+Output (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{float}]{Volts }\end{DoxyParamCaption})}
+
+
+
+Sets the value for analog output. 
+
+Set Analog Output 
+\begin{DoxyParams}{Parameters}
+{\em Volts} & output value in volts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a7c620251f9ffa5dac3a4219a087b1e3b}\label{_h_w_wrapper_8h_a7c620251f9ffa5dac3a4219a087b1e3b}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!set\+Digital\+Output@{set\+Digital\+Output}}
+\index{set\+Digital\+Output@{set\+Digital\+Output}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{set\+Digital\+Output()}{setDigitalOutput()}}
+{\footnotesize\ttfamily int set\+Digital\+Output (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the Digital Output. 
+
+Set Digital Output 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+{\em value} & output value in boolean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a60bf42f7fe8f6e8a7f4f143ce6c4f939}\label{_h_w_wrapper_8h_a60bf42f7fe8f6e8a7f4f143ce6c4f939}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!set\+Encoder@{set\+Encoder}}
+\index{set\+Encoder@{set\+Encoder}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{set\+Encoder()}{setEncoder()}}
+{\footnotesize\ttfamily int set\+Encoder (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{encvalue }\end{DoxyParamCaption})}
+
+
+
+Sets a value to the specified encoder channel. Used for homing the encoder channel. 
+
+Set the Encoder value 
+\begin{DoxyParams}{Parameters}
+{\em channel} & the encoder channel number \\
+\hline
+{\em encvalue} & the encoder value to be set to the encoder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_a1841c1de89be8fc68e8fbbd8b68bd6f5}\label{_h_w_wrapper_8h_a1841c1de89be8fc68e8fbbd8b68bd6f5}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!set\+Encoder\+Metric\+Reader@{set\+Encoder\+Metric\+Reader}}
+\index{set\+Encoder\+Metric\+Reader@{set\+Encoder\+Metric\+Reader}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{set\+Encoder\+Metric\+Reader()}{setEncoderMetricReader()}}
+{\footnotesize\ttfamily int set\+Encoder\+Metric\+Reader (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{float}]{enc2metric }\end{DoxyParamCaption})}
+
+
+
+Sets the conversion factor for the Encoder Metric Reader. 
+
+Set Enocder Metric Reader 
+\begin{DoxyParams}{Parameters}
+{\em channel} & channel number \\
+\hline
+{\em enc2metric} & the conversion factor from encoder pulses to the metric \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_h_w_wrapper_8h_aec2c86cbe716076411d7c03f006cc2c9}\label{_h_w_wrapper_8h_aec2c86cbe716076411d7c03f006cc2c9}} 
+\index{H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}!set\+P\+WM@{set\+P\+WM}}
+\index{set\+P\+WM@{set\+P\+WM}!H\+W\+Wrapper.\+h@{H\+W\+Wrapper.\+h}}
+\subsubsection{\texorpdfstring{set\+P\+W\+M()}{setPWM()}}
+{\footnotesize\ttfamily int set\+P\+WM (\begin{DoxyParamCaption}\item[{int}]{channel,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the P\+WM output value. 
+
+Set P\+WM 
+\begin{DoxyParams}{Parameters}
+{\em value,specify} & value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}

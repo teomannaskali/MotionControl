@@ -1,0 +1,79 @@
+\hypertarget{_sensor_8h}{}\section{/\+Users/teo/\+Documents/\+Motion\+Control/\+Sensor/\+Sensor.h File Reference}
+\label{_sensor_8h}\index{/\+Users/teo/\+Documents/\+Motion\+Control/\+Sensor/\+Sensor.\+h@{/\+Users/teo/\+Documents/\+Motion\+Control/\+Sensor/\+Sensor.\+h}}
+
+
+General definition of an sensor containing the data structures.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_sensor__}{Sensor\+\_\+}
+\begin{DoxyCompactList}\small\item\em Sensor structure contains all the parameters and states of the sesor. The sensor sturcutre also contains the input and output channel numbers for a sensor along with function pointers to functions of the sensor to initialize, read, reset and delete the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_sensor_8h_a2345d78555d279eeaef981d064465792}\label{_sensor_8h_a2345d78555d279eeaef981d064465792}} 
+\#define \hyperlink{_sensor_8h_a2345d78555d279eeaef981d064465792}{S\+E\+N\+S\+M\+A\+X\+IO}~3
+\begin{DoxyCompactList}\small\item\em Defines the number of maximum different types input or output IO channel access by a single sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_sensor_8h_a5945e15505abbc7c61a1dab4b5e7029e}\label{_sensor_8h_a5945e15505abbc7c61a1dab4b5e7029e}} 
+\#define \hyperlink{_sensor_8h_a5945e15505abbc7c61a1dab4b5e7029e}{S\+E\+N\+S\+M\+A\+X\+IN}~3
+\begin{DoxyCompactList}\small\item\em Defines the maximum number of inputs all sensors may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_sensor_8h_aa6edc88b24baff0ebcc7353a7585df31}\label{_sensor_8h_aa6edc88b24baff0ebcc7353a7585df31}} 
+\#define \hyperlink{_sensor_8h_aa6edc88b24baff0ebcc7353a7585df31}{S\+E\+N\+S\+M\+A\+X\+O\+UT}~3
+\begin{DoxyCompactList}\small\item\em Defines the maximum number of outputs all sensors may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_sensor_8h_aaef3a6b7d94f6c074a095cf402af34e8}\label{_sensor_8h_aaef3a6b7d94f6c074a095cf402af34e8}} 
+\#define \hyperlink{_sensor_8h_aaef3a6b7d94f6c074a095cf402af34e8}{S\+E\+N\+S\+M\+A\+X\+S\+T\+A\+T\+ES}~5
+\begin{DoxyCompactList}\small\item\em Define the maximum number of states that all sensors may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_sensor_8h_ae574c15d7c9187dd43836c1b97371720}\label{_sensor_8h_ae574c15d7c9187dd43836c1b97371720}} 
+\#define \hyperlink{_sensor_8h_ae574c15d7c9187dd43836c1b97371720}{S\+E\+N\+S\+M\+A\+X\+P\+A\+R\+A\+M\+E\+T\+E\+RS}~4
+\begin{DoxyCompactList}\small\item\em Define the maximum number of parameters that all sensors may have. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_sensor_8h_aae65f8b69708d060822e3c889d879520}\label{_sensor_8h_aae65f8b69708d060822e3c889d879520}} 
+typedef struct \hyperlink{struct_sensor__}{Sensor\+\_\+} {\bfseries Sensor}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_sensor_8h_a6270ccd393376f5ba2ef2136a89f8646}{setup\+Sensor} (\hyperlink{struct_sensor__}{Sensor} $\ast$s, char $\ast$name, char $\ast$unit, double($\ast$read)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s), int($\ast$set\+Parameter)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s, int parameter, double v), int($\ast$reset)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s), int($\ast$remove)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s))
+\begin{DoxyCompactList}\small\item\em setup sensor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+General definition of an sensor containing the data structures. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_sensor_8h_a6270ccd393376f5ba2ef2136a89f8646}\label{_sensor_8h_a6270ccd393376f5ba2ef2136a89f8646}} 
+\index{Sensor.\+h@{Sensor.\+h}!setup\+Sensor@{setup\+Sensor}}
+\index{setup\+Sensor@{setup\+Sensor}!Sensor.\+h@{Sensor.\+h}}
+\subsubsection{\texorpdfstring{setup\+Sensor()}{setupSensor()}}
+{\footnotesize\ttfamily int setup\+Sensor (\begin{DoxyParamCaption}\item[{\hyperlink{struct_sensor__}{Sensor} $\ast$}]{s,  }\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{unit,  }\item[{double($\ast$)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)}]{read,  }\item[{int($\ast$)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s, int parameter, double v)}]{set\+Parameter,  }\item[{int($\ast$)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)}]{reset,  }\item[{int($\ast$)(struct \hyperlink{struct_sensor__}{Sensor\+\_\+} $\ast$s)}]{remove }\end{DoxyParamCaption})}
+
+
+
+setup sensor 
+
+Function to setup the sensor This function is used to setup the fields of the sensor structure, such as assigning the functions to it. 
+\begin{DoxyParams}{Parameters}
+{\em s} & pointer to the sensor structure \\
+\hline
+{\em name} & contains name of the sensor as a string \\
+\hline
+{\em units} & contains the units of the sensor as a string \\
+\hline
+{\em read} & function pointer to the function to read the values of the sensor \\
+\hline
+{\em set\+Parameter} & function pointer to the function to set the parameters of the sensor \\
+\hline
+{\em reset} & function pointer to the function to reset the sensor \\
+\hline
+{\em remove} & function pointer to the function to remove or delete the sensor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for error 
+\end{DoxyReturn}
